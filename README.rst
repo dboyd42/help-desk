@@ -12,7 +12,12 @@ amount of work I've been putting into this thing.  Anyways, my reports will
 eventually be transferred into this repo.  But for now, I'll only be adding my
 latest issues.
 
-Repo Layout
-===========
-:prgms: issues with apt programs.
+Contents
+========
+
++-----------+--------------------------+
+| Directory | Description              |
++===========+==========================+
+| prgms     | issues with apt programs |
++-----------+--------------------------+
 
