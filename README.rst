@@ -18,6 +18,8 @@ Contents
 +-----------+--------------------------+
 | Directory | Description              |
 +===========+==========================+
-| prgms     | issues with apt programs |
+| bash      | terminal & commands      |
++-----------+--------------------------+
+| prgms     | issues with all programs |
 +-----------+--------------------------+
 
