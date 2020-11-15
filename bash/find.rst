@@ -7,11 +7,11 @@ find
 **************************************
 :Status: Solved
 :Reason: The C drive is in the root '\' directory
-:Fix: "modularize" the 'find' command with '-type'
+:Fix: -mount (don't descend directories on other filesystems)
 
 Solution:
 
 .. code-block:: Bash
 
-	find / -path "/mnt" -prune -type f -iname "*whatever*"
+	find / -iname "*whatever*" -mount
 
