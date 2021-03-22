@@ -20,7 +20,11 @@ In Vim
 
 	# Colorscheme and Syntax translates to html colors --bad for B&W printers
 	:syntax off
-	:colorscheme morning
+	:colorscheme default
+	# Set the LineNumber colors
+	:highlight LineNr ctermfg=black
+	# [OPTIONAL] Set the background of the linenumbers --not recommended
+	:highlight LineNr ctermbg=<color>
 
 	# Convert to HTML and save files
 	:bufdo TOhtml
