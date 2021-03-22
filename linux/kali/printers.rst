@@ -3,6 +3,17 @@ printers
 :Author: David Boyd
 :Date: 2021-03-21
 
+Install Through:
+****************
+:URL: https://support.brother.com/g/b/downloadlist.aspx?c=us&lang=en&prod=dcpl2540dw_us_as&os=128
+
+Then follow instructions.  Say yes for URI location.  Use DNS network then
+input IP address.
+
+Error still lies in vim--not printing.
+
+	- :hardcopy says sent to printer but doesn't print.  Idk why...
+
 Notable Errors
 **************
 
@@ -52,12 +63,14 @@ Reconfigure DNS location to static IP address.
 
 [ERROR-03] Vim :hardcopy not printing
 =====================================
-:Status: [Resolved]
+:Status: NOT resolved
 
 Description
 -----------
 
 Error: E365 Failed to print PostScript file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+:Resolved: https://support.brother.com/g/b/downloadlist.aspx?c=us&lang=en&prod=dcpl2540dw_us_as&os=128
 
 Solution
 --------
