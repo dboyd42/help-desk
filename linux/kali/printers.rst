@@ -6,10 +6,90 @@ printers
 Notable Errors
 **************
 
-1. [Resolved] ERROR-01: Add <userName> to lpadmin
+[ERROR-01] Add <userName> to lpadmin
+====================================
+:Status: [Resolved]
 
-2. [Resolved] ERROR-02: CUPS adds printer location through DNS name, but
-doesn't use local DNS to print... wtf.
+Description
+-----------
+
+Can't access admin Web Interface page.
+
+
+Solution
+--------
+
+	`sudo useradd <userName> lpadmin`
+
+[ERROR-02] Can't Print Test Page
+================================
+:Status: [Resolved]
+
+Description
+-----------
+
+CUPS adds printer location through DNS name, but doesn't use local DNS to
+locate the printer after installing... wtf.
+
+Solution
+--------
+
+Reconfigure DNS location to static IP address.
+
+.. code-block:: Bash
+
+	# Stop CUPS service
+	sudo systemctl stop cups
+
+	# Open to edit printer configuration file
+	sudo vim /etc/cups/printers.conf
+
+	# Replace <dnsName> with the printer's <IPAddr>
+	DeviceURI lpd://<IPAddr>/BINARY_P1
+
+	# Restart CUPS service
+	sudo systemctl start cups
+
+[ERROR-03] Vim :hardcopy not printing
+=====================================
+:Status: [Resolved]
+
+Description
+-----------
+
+Error: E365 Failed to print PostScript file
+
+Solution
+--------
+
+Set default printer.
+Check default printer: `lpr file.ext`
+
+OPTION 1
+^^^^^^^^
+Gnome GUI > Settings > Printer > Options > [check] Set as Default printer
+
+OPTION 2
+^^^^^^^^
+:Note: NOT Tested
+
+**Below allows you to print from command line:**
+
+`lp -d HP_LaserJet_P1005 main.c`
+
+or
+
+`lpr -P HP_LaserJet_P1005 main.c`
+
+Replace the printername by your printer name
+
+**Below sets the default printer (not sure if it's persistent)**
+
+`lpoptions -d HP_LaserJet_P1005`
+
+and now you can use lpr (or lp) without additional parameters.
+
+`lpr main.c`
 
 Install and run CUPS
 ********************
