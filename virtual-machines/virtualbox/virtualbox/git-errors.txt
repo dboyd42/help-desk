@@ -1,0 +1,24 @@
+git clone errors
+================
+:Env: VirtualBox > Kali 20.3
+:STATUS: Resolved
+:Resolution: reset the terminal
+:Reason: Possible error due memory allocation +- prev->git clone repo
+
+.. code-block:: Bash
+
+	# the command
+	sudo git clone https://github.com/scipag/vulscan.git
+
+	# the output
+	Cloning into 'vulscan'...
+	remote: Enumerating objects: 4, done.
+	remote: Counting objects: 100% (4/4), done.
+	remote: Compressing objects: 100% (4/4), done.
+	fatal: pack has bad object at offset 32874: inflate returned -5
+	fatal: index-pack failed
+
+	# [SOLVED]
+	reset
+	sudo git clone https://github.com/scipag/vulscan.git
+

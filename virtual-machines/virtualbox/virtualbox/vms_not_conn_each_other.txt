@@ -1,0 +1,24 @@
+VM1 Not Connecting to VM2
+#########################
+:Possible Reason: Configured new SOHO unit
+:Status: Resolved
+:Issue: VM1's Host-Only adapter != match VBox-Adapter Settings
+:Resolution: Renew IP
+:URL0: https://www.cyberciti.biz/faq/howto-linux-renew-dhcp-client-ip-address/
+
+.. code-block:: Bash
+
+	# release IP
+	sudo dhclient -r
+
+	# renew IP
+	sudo dhclient
+
+	# If VM not conn to NAT:
+	# find NAT adapter
+	ip address show
+
+	# release IP
+	sudo dhclient -r eth1		# if eth1 = NAT adaptehr
+	# renew IP
+	sudo dhclient eth1

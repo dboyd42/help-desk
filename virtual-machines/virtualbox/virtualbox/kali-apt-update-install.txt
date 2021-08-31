@@ -1,0 +1,12 @@
+Kali VBox Not Updating/Installing
+#################################
+:Status: Solved
+:Reason: Probable cause with Windows Hypervisor
+:URL: https://forums.kali.org/showthread.php?48822-Kali-2020-2-OVA-VIRTUALBOX-HASH-SUM-MISMATCH&p=96304#post96304
+
+.. code-block:: Bash
+
+	mkdir /etc/gcrypt
+	echo all /etc/gcrypt/hwf.deny
+	apt update
+

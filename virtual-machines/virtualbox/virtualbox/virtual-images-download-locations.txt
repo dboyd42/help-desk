@@ -1,0 +1,60 @@
+:DVWA: http://www.dvwa.co.uk/DVWA-1.0.7.iso
+:Kali: https://kali.org/downloads
+:Metasploitable: https://information.rapid7.com/download-metasploitable-2017.html
+
+DVWA
+====
+:NOTE: VM needs constant access to DVWA*.iso img.  ::saveToPermanentLocation
+
+Installation
+------------
+
+1.  Download ISO file from dvwa.co.uk/DVWA-1.0.7.iso
+2.  VirtualBox > New
+
+	a.	Type: Linux, Version: Ubuntu (64-bit)
+	b.	Default memory: 1024 MB (1 GB)
+	c.	Create Virtual Hard Disk Now (default)
+	d.	VDI (default)
+	e.	Dynamically Allocated: 10.00 GB (default)
+
+3.	Settings
+
+	a. General > Advanced
+
+		i.	Shared Clipboard: Bidrectional
+		ii.	Drag'n'Drop: Bidirectional
+
+	b. Storage
+
+		i. Controller: IDE > Empty > Attributes >
+			- Optical Drive: IDE Secondary Master [Disc ICON] > DVWA-1.0.7.iso
+
+Metasploitable
+==============
+:NOTE: Doing this out of order prevents VBox security feature of "overwriting"
+an existing VM.
+
+Installation
+------------
+
+1.	Download > Submit false credentials > download from web page
+2.	VBox > New						// Create Virtualbox Directory
+
+	Name: Metasplitable2-Linux		// match download name
+	Type: Linux
+	Version: Ubuntu (64-bit)
+
+	*After next, do NOT proceed with VBox*
+
+3.	Extract Metasplitable2-Linux.zip to C:\Users\%USER%\"VirtualBox VMs"\<Name>
+
+	// Ie) "VirtualBox VMs"\Metasplitable2-Linux\<files-only>	#NO FOLDERS!
+
+4.	VBox
+
+	a.	Default RAM
+	b. **Create Virtual Machine:
+			[Radial] Use an existing virtual hard disk file >
+			Add > [dir] ..\Metasploitable2-Linux\Metasploitable.vmdk
+

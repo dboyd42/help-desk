@@ -1,0 +1,32 @@
+Connect USB Wireless Adapter to Kali in VBox
+#############################################
+:URL: https://www.youtube.com/watch?v=K1ETBeRQBs4
+
+Fix
+===
+
+1. VB > Settings > USB > USB 2.0 (OHCI + EHCI) Controller > Add (USB+'+')
+2. Ralink 802.11 n WLAN [0101]
+3. Boot Kali VM
+
+No Networks Found
+------------------
+:cmd: airdump-ng wlan0mon 
+:fix: unplugged and plug it back in... wtf.  (yes, you can keep VB running).
+
+
+:NOTE: Upon boot, VB will unmount external-usb-card and auto-mount w/in VB
+
+===
+This yielded problems w/in Airodump-ng wlan0mon
+=========================================================
+1. Make sure the USB-Wifi-card is woking for you host
+2. Add a USB filter for the USB-Wifi-card to the Kali VBox
+	2a) VB > Settings > USB > Add (Use the USB icon with plus symbol)
+	2b) Copy USB Filter Details (except 'Remote')
+	2c) Delete USB Filter
+	2d) Add New Filter (USB icon with the circle)
+	2e) Input copied details into the New Filter
+3. Remove the wireless card from the host machine (unplug the card from computer)
+4. Start the Kali VM and login
+5. Reaatach the USB-Wifi-card to computer and viola!

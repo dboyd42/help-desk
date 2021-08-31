@@ -1,0 +1,32 @@
+Problem: Not connecting to NAT and Host Adapter
+===============================================
+:STATUS: Resolved #workaround
+:Platform: VirtualBox
+:VM: Kali 2020.3
+
+[TERMINAL]
+
+sudo vim /etc/network/interfaces
+
+# NAT Adapter
+auto eth0
+iface eth0 inet dhcp
+
+# Host-Only Adapter
+auto eth1
+iface eth1 inet static
+    address 10.10.1.12
+    gateway 10.10.1.1
+    netmask 255.255.255.0
+
+[END TERMINAL]
+
+auto
+    use auto if you want the interfaces to be brought up at boot time
+
+Troubleshooting
+===============
+:Issue: Could not set NAT Adapter (VirtualBox) to static.
+:Reason: Couldn't find the gateway address AND netmask (Class A???)
+
+

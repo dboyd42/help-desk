@@ -1,0 +1,11 @@
+Error:
+    could-not-move-extension-directory-into-profile-chrome/
+    =======================================================
+    Reason: Admin has blocked installing extensions
+    
+    URL: https://www.thewindowsclub.com/could-not-move-extension-directory-into-profile-chrome/
+
+    Fix:
+        1) File Explorer > %LocalAppData%\Google\Chrome\User Data\
+            --create folder 'Default'
+

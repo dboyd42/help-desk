@@ -1,0 +1,16 @@
+Ventoy - A Multi-OS Bootable USB
+#################################
+URL: https://github.com/ventoy/Ventoy/releases
+
+1. Download
+	https://www.ventoy.net/en/download.html
+	-OR-
+	https://github.com/ventoy/Ventoy/releases
+
+2. Format USB > NTFS
+
+3. Run Ventoy2Disk.{exe,sh}
+	- Select USB
+
+4. Copy ISO files > 1st Partition (exFAT)
+
