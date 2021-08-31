@@ -1,0 +1,4 @@
+# Flip the screen (rotate by 180 degrees) for lcd display
+vi /boot/config.txt
+lcd_rotate=2
+# save and restart

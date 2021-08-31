@@ -1,0 +1,11 @@
+SSH into Raspberry Pi
+#####################
+:Required: Raspberry Pi IP address
+
+1.	Enable SSH on the Raspberry Pi
+	Raspberry Pi > Preferences > Raspberry Pi Configuration > Interfaces >
+	SSH: Enable
+
+2.	SSH into Raspberry Pi's IP address w/ user credentials
+	- default: pi:raspberry
+
