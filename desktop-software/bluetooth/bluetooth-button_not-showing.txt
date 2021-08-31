@@ -1,0 +1,12 @@
+https://www.dell.com/community/XPS-Desktops/XPS-8930-Qualcomm-Atheros-QCA61x4-Bluetooth-on-not-working/m-p/7580475#M50124
+
+
+Hi @RoHe ,  No "A" on my device name, just QCA61x4.   package states 12.0.0.916, A33, but yes when installed driver properties shows 10.0.0.916
+
+Just spoke to Tech Support...  performed a motherboard reset..... 
+1/ shutdown
+2/ remove power cord
+3/ hold power-button for 10secs
+4/ re-insert power cord and power-on
+
+Now working fine.  (Driver still showing 10.0.0.916)
