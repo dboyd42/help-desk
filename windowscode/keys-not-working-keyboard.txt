@@ -1,0 +1,10 @@
+Keys Not Working on Keyboard
+############################
+:Issue: Stick Keys
+:Status: RESOLVED
+
+Enable/Disable
+--------------
+
+Press <Shift> five times consecutively.
+

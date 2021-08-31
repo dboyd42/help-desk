@@ -1,0 +1,10 @@
+To enable recovery in Windows when reinstall factory settings won't run:
+
+cmd::
+
+	reagentc/info
+	reagentc/enable
+
+// Find file --does not work in PowerShell
+
+	dir /a /s C:\winre.wim

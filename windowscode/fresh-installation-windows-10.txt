@@ -1,0 +1,17 @@
+Windows Fresh Install
+=====================
+
+firefox
+WSL
+choco install
+	[+] vim
+	[+] git
+		# Troubleshooting: 'git' is not recognized
+		I had to close a host of apps to be able to do the installation successfully with:
+			choco upgrade git --force
+		What needed to be closed included Visual Studio 2019, VS Code, one PowerShell window, Explorer.
+		I used Process Explorer tool to find out what was holding handless to git.exe.
+
+visualstudio
+	https://visualstudio.microsoft.com/
+

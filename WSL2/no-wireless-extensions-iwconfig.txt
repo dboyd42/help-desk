@@ -1,0 +1,16 @@
+No Wireless Extensions
+######################
+:Status: UNRESOLVED
+:WorkAround: VM, dual-boot
+:Command: iwconfig
+:Issues: cannot use aircrack-ng tools
+:Reason: Currently unsupported
+:Tags: #aircrack-ng #wifi #adapters
+
+Explanation
+===========
+
+The Win32-side networking settings control the kernel, which then controls the
+Linux-side networking.  There are no real networking devices set up in the
+'/dev' on the Linux side... at the moment.
+

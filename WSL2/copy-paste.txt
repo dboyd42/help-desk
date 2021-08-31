@@ -1,0 +1,22 @@
+Copy Paste WSL<>Windows
+#######################
+
+Withing Terminal
+================
+
+.. code-block:: WSL
+
+	<C-S>c
+	<C-S>v
+
+System Clipboard
+================
+
+.. code-block:: WSL
+
+	clip.exe < whatever
+
+
+
+
+

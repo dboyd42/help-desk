@@ -1,0 +1,42 @@
+Down and Dirty
+##############
+
+Print Spooler
+=============
+services.msc > Print Spooler > Start/Stop
+
+Clear Print Queue
+=================
+printers & scanners > [printer_name] > Open queue 
+	<C-a><Delete>
+
+
+Windows: Clear Print Queue
+##########################
+
+Command Method
+==============
+
+You can clear the print queue using commands like this.
+
+    Select Start.
+    Type Command.
+    Right-click “Command Prompt” and select “Run as administrator“.
+    Type net stop spooler then press “Enter“.
+    Type del %systemroot%\System32\spool\printers\* /Q then press “Enter“.
+    Type net start spooler then press “Enter“.
+    The print queue on your Windows  should now be cleared. Type exit, then press “Enter” to exit the command window.
+
+GUI Method
+==========
+
+You can clear the print queue using this the Windows GUI.
+
+    Hold down the Windows Key and press “R” to bring up the Run dialog.
+    Type services.msc, then press “Enter“.
+    Find the “Print Spooler” service in the list. Right-click it, then select “Stop“.
+    Leave the Services window open. Hold down the Windows Key and press “R” to bring up the Run dialog.
+    Type %systemroot%\System32\spool\printers\, then press “Enter“.
+    Select all of the files by holding “CTRL” and pressing “A“.
+    Press the “Delete” key to delete all of the files.
+    Go back to the Services window, right-click “Print Spooler“, then select “Start“

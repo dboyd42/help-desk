@@ -1,0 +1,9 @@
+Change Default Audio Output (Not the Same in Win10)
+###################################################
+:Status: SOLVED
+:Reason: Bad audio output through bluetooth
+
+Settings>Sound>
+	click 'Headphones\n Airpods Stereo'
+		>Set Default
+

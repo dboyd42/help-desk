@@ -1,0 +1,81 @@
+Cygwin Installation
+
+//==============
+//=== STEP 1 === |||| INSTALLATION ||||
+//==============
+
+INSTALL VIM!!
+
+https://cygwin.fandom.com/wiki/How_to_install_a_newer_version_of_GCC
+Verify Cygwin Prerequisites Edit
+
+Check that you have following packages under Cygwin. If something is missing or outdated, download it using the setup.exe utility from the Cygwin site (http://cygwin.com/):
+
+    bash (found in the Base section)
+    gzip (version 1.2.4 or later; found in the Base section)
+    binutils (found in the Devel section)
+    bzip2 (version 1.0.2 or later; found in the Utils section)
+    gcc-core (or any other C compilier; found in the Devel section)
+    gcc-g++ (needed only if you want to install c++ compilier; found in the Devel section)
+    gcc-ada (needed only if you want to install Ada compilier; any version; found in the Devel section)
+    m4 (found in the Interpreters section)
+    make (version 3.79.1 or later; found in the Devel section)
+    Either/or:
+        zip and unzip (needed only if you want to install Java; found in the Archive section)
+        gcc-java (needed only if you want to install Java; only jar command is needed; found in the Devel section) 
+
+You can check package version numbers and statuses with the cygche
+   cygcheck -c  \
+       bash binutils bzip2 cygwin gcc-core gcc-g++ gcc-java gzip m4 make unzip zip
+
+
+//=== YouTube ===
+https://www.youtube.com/watch?v=DAlS4hF_PbY
+
+category ->
+	gcc-core	-> Devel -> Install
+	c++		-> Devel -> Install
+full	 ->
+	gdb		-> The GNU Debugger -> Install
+
+
+//==============
+//=== STEP 2 === |||| ENV VARS ||||
+//==============
+
+environment variables -> environment variables -> {system variables} path -> Edit -> C:\cygwin\bin\
+
+//==============
+//=== STEP 3 === |||| mv files ||||
+//==============
+
+// the setup runs as your updater
+
+cut your setup.exe and mirrored directories to C:\cygwin\ for future dowloads and updates
+
+//==============
+//=== STEP 4 === |||| mv files ||||
+//==============
+
+// mv setup.exe && downloaded library folder
+
+mv C:\Downloads\setup_86x.exe C:\cygwin64\;
+mv C:\Downloads\downloadedFolderName.exe C:\cygwin64\;
+
+
+//===================================================================================================================
+//===================================================================================================================
+//===================================================================================================================
+
+Uninstall Cygwin
+
+
+//==============
+//=== STEP 1 === |||| CMD:ADMIN ||||
+//==============
+
+// find dir: cygwin64 (usu. -> C:\ )
+$ dir
+$ takeown /r /d y /f cygwin54
+$ icacls cygwin64 /t /grant everyone:F
+$ rmdir /s /Q cygwin64

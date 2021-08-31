@@ -1,0 +1,17 @@
+### Virtual Desktops (Workspaces)
+<Win-C>D		New Virtual 'D'esktop
+<Win-C><Left><Right>	Switch Desktops
+<Win-C>F4		Close Virtual Desktop
+
+### Appearance
+<Win-'<'>		Transparent Window Panes
+
+
+### Applications
+<Win-M><Tab>		Apps Panel
+<C-S><Esc>		Task Manager
+<Win-A>			Action Center
+
+### Actions
+<Win-+/->		Magnifier
+<Win><PrtScreen>	Screenshot

@@ -1,0 +1,7 @@
+Display WSL GUI Apps
+#####################
+
+XLauncher:	(failed)
+	https://www.how2shout.com/how-to/run-linux-gui-apps-on-windows-10-with-native-bash.html
+
+

@@ -1,0 +1,18 @@
+//=====================
+
+//=== Access Drives ===
+
+//=====================
+
+
+//=== Change Device Dir ===
+cd E:/<something>/ 	// for XPS->SD Card:: $ cd D:/
+
+
+# Copies the contents of the file to your clipboard
+cat ~/abc/def/file.txt > /dev/clipboard
+# Copies the "text" to your clipboard
+echo text > /dev/clipboard
+
+//=== Secure a folder {Windows CMD} ===
+attrib -s -h “C:\Users\Taylor Gibb\Desktop\Top Secret”

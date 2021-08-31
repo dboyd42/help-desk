@@ -1,0 +1,24 @@
+Configure the Windows Powershell to display only the current folder name in the shell prompt
+
+I found this was pretty easy - combining @Synetech's answer and the info found at PowerShell profiles. Because I am a newbie to PS. My steps (for vscode):
+
+1.    test-path $profile (in the PS command prompt - is there a profile set up?)
+2.       new-item -path $profile -itemtype file -force (assuming the answer to the above is false)
+3.          notepad $profile (opens notepad)
+
+4.    paste in
+
+    function prompt {
+      $p = Split-Path -leaf -path (Get-Location)
+      "$p> "
+    }
+
+5.    save (you shouldn't have to chose a location, it is already done for you)
+6.       reload vscode - you will probably get a message about running scripts (or just do next step before reload)
+
+7.    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser (at your PS prompt, from the SuperUse answer)
+
+8.    reload vscode
+
+https://superuser.com/questions/446827/configure-the-windows-powershell-to-display-only-the-current-folder-name-in-the
+

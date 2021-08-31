@@ -1,0 +1,31 @@
+MS Word - Macros
+################
+
+Developers Tab
+==============
+:Steps: File > Options > Customize Ribbon > Main Tabs > Developer
+
+Find and Replace
+================
+:Shortcut: <C-h>
+:Wildcards: https://www.howtogeek.com/362551/how-to-use-wildcards-when-searching-in-word-2016/
+
+Formatting (Only)
+-----------------
+:Find Tab: Reading Highlight > Highlight All
+:Search Options: More > Use wildcards
+:Find What: <Question [0-9]{1,2}\: Incorrect>
+:<>: Marks beg & end of a word
+:[]: Marks specific character(s) &/or ranges
+:{}: Marks occurrences of previous char/pattern
+
+Recording
+=========
+:Steps: Developer > Code > Record Macro
+:Warnings: Doesn't implement <C-f> -nor- Mouse Actions
+
+VBE (Visual Basic Environment)
+==============================
+:Steps: Developer > Macros > ..Create [Macro name, Description]
+:URL: https://www.techrepublic.com/article/macro-trick-how-to-highlight-multiple-search-strings-in-a-word-document/
+

@@ -1,0 +1,65 @@
+Mixing Linux and Windows Commmands
+##################################
+:URL: https://docs.microsoft.com/en-us/windows/wsl/interop#mixing-linux-and-windows-commands
+
+Powershell
+==========
+:Syntax: wsl <command>
+
+.. code-block:: Cmd/Powershell
+
+	wsl cat file.txt
+
+Linux
+=====
+:Synatx: [tool-name].exe
+
+.. code-block:: Bash
+
+	# Run Windows ipconfig.exe then Linux's grep & cut tools
+	ipconfig.exe | grep -i ipv4 | cut -d: -f2
+
+	# List the contents of your Windows files system C:\ dir
+	cmd.exe /C dir
+
+WSL-Open
+========
+:URL: https://github.com/4U6U57/wsl-open
+:Usage: Utility for opening files w/in the WSL CLI in Win-GUI applications.
+
+Installation
+------------
+
+**GLOBAL MACROS**
+:URL: https://stackoverflow.com/questions/3560326/how-to-make-a-shell-script-global
+
+.. code-block:: WSL
+
+	# Check if a bin folder is in your /usr/local/ directory
+	ll /usr/local/bin/
+	# If not, then create bin folder
+	mkdir /usr/local/bin
+
+	# Download the script to a file named 'wsl-open'
+	sudo curl -o /usr/local/bin/wsl-open https://raw.githubusercontent.com/4U6U57/wsl-open/master/wsl-open.sh
+
+	# Change execution permissions
+	sudo chmod +x ~/bin/wsl-open
+
+**FOR LOCAL USER**
+
+.. code-block:: WSL
+
+	# Make a bin folder in your home directory
+	mkdir ~/bin
+
+	# Add the bin folder to your PATH in your bashrc	// [+] b/c NOT global
+	echo '[[ -e ~/bin ]] && PATH=$PATH:~/bin' >> .bashrc
+
+	# Download the script to a file named 'wsl-open'
+	curl -o ~/bin/wsl-open https://raw.githubusercontent.com/4U6U57/wsl-open/master/wsl-open.sh
+
+	# Change execution permissions
+	chmod -x ~/bin/wsl-open
+
+

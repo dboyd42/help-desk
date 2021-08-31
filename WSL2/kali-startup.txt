@@ -1,0 +1,15 @@
+Kali WSL
+========
+
+https://www.kali.org/news/kali-linux-in-the-windows-app-store/
+
+bhatw
+
+prgms to install:
+
+apt update -y && apt upgrade -y
+apt install 
+	burpsuite exploitdb nmap tcpdump  
+	git tmux vim
+	python python3 pip pip3
+	ssh sshpass

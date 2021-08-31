@@ -1,0 +1,9 @@
+Cannot preview images in windows explorer or my computer "pictures" folder
+===========================================================================
+
+You may follow the below steps and check if the option is unchecked –
+
+    Open Windows Explorer window. In the menu click on the tab Tools (If not visible click the ALT key for the menu to get displayed).
+    Now click on Folder options. In the opened window go to the view tab and uncheck the option “Always show icons, never thumbnails”. Now click Apply and OK. 
+
+Now check if you are able to preview the pictures.

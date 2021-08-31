@@ -1,0 +1,16 @@
+Change Default Apps
+-------------------
+
+If prgm/app is Windows approved/MS Store:
+
+    Settings > Default apps > by{filetype,protocol,app}
+
+Else:
+
+    1) Create a new text document
+    2) Change the extension to desired filetype.
+    3) Rt-click > Open With ... > Choose another app
+    4) More apps
+    5) Choose app/prgm
+    6) [Checkbox] Always use this app to open .<ext> files
+

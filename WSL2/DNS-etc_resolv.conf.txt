@@ -1,0 +1,65 @@
+Nameserver Keeps Resetting Causing No-Connectivity Issues
+#########################################################
+:Status: Resolved
+:Summary: WSL keeps resetting /etc/resolv.conf DNS address
+:Root Issue: Symlink between /etc/resolv.conf -> ../run/resolvconf/resolv.conf
+
+Solution
+========
+
+Reinstall Windows 10 --keeping all files
+Reinstall WSL
+
+/etc/resolv.conf -> ../run/resolvconf/resolv.conf
+
+This will fuck up your LAN connections
+=======================================
+
+.. code-block:: Bash
+
+	sudo unlink /etc/resolv.conf
+	# replace /etc/resolv.conf ip address to your liking
+	# such as, 8.8.8.8 or your Pi-Hole
+
+Is Powershell: wsl --shutdown still required?
+
+My Solution
+===========
+
+.. code-block:: Bash
+
+	cp /etc/resolv.conf /etc/wsl.conf
+	# uncomment lines 2 and 3
+	sudo vim /etc/wsl.conf
+
+	# softlink that shit
+	sudo ln -sf /etc/resolv.conf /etc/wsl.conf
+
+.. code-block:: Powershell
+
+	# shutdown WSL through here!
+	wsl --shutdown
+
+Restart WSL and you now have persistance!
+
+Original Solution
+=================
+:URL:  https://github.com/microsoft/WSL/issues/4285
+
+Create a file: /etc/wsl.conf.
+Put the following lines in the file
+
+	[network]
+	generateResolvConf = false
+
+In a cmd window, run
+	wsl --shutdown
+
+Restart WSL2
+Create a file: /etc/resolv.conf. If it exists, replace existing one with this new file.
+Put the following lines in the file
+
+	nameserver 8.8.8.8
+
+	Repeat step 3 and 4. You will see git working fine now.
+

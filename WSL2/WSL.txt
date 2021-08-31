@@ -1,0 +1,49 @@
+disWSL (Windows Subsystem Linux)
+#############################
+	About       : https://docs.microsoft.com/en-us/windows/wsl/about
+	Installation: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+WSL2
+====
+currVer = <Super+r>winver<CR>
+If (curr winver < 2004):
+	# Note: This d/l 'Update Assistant' tool to assist with upgrade
+	https://www.microsoft.com/en-us/software-download/windows10
+
+1) Install WSL
+	# https://docs.microsoft.com/en-us/windows/wsl/install-win10
+	dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+2) Update WSL1 > WSL2
+	https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
+
+	### Troubleshooting
+	# This update only applies to machines with the WSL
+	:Status: Resolved
+	:URL   : https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
+	shutdown -r /t 0
+
+3) Enable the 'Virtual Machine Platform' optional component
+	# Powershell (Admin)
+	dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+	shutdown -r /t 0
+
+4) Set WSL as your default version
+	# PowerShell
+	wsl --set-default-version 2
+
+5) Install your Linux distro @MS Store
+	[+] Terminal
+		-> <C-,> Change starting directories of WSLs (post-installation)
+	[+] Ubuntu <= 20.04 LTS
+		-> add 'ping' to sudoers group
+	[+] Kali
+		-> apt-get update --fix-install
+		[+] kali-win-kex
+	[+] openSUSE
+
+
+Multi-WSL
+=========
+
+    GOTO MS Store

@@ -1,0 +1,21 @@
+Open PowerShell with 'Run as Administrator'
+
+############################################
+
+	
+
+1. Print list of Windows Prgms to txt file for reference::
+
+		
+
+Get-AppxPackage | Select Name, PackageFullName > "$env:userprofile\Desktop\myapps.txt"
+
+	
+
+2. Remove selected programs::
+
+		
+
+Get-AppxPackage *Microsoft.WindowsFeedbackHub* -AllUsers | Remove-AppxPackage
+
+

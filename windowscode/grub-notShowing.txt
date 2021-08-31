@@ -1,0 +1,47 @@
+Dual Booting with Grub
+
+//=============
+//=== ERROR === |||| Auto boots into Windows ||||
+//=============
+https://askubuntu.com/questions/681422/grub-menu-not-showing-with-dual-boot-uefi-mode-installation
+
+	1. Change BIOS boot order to Ubuntu
+	2. Disable Windows hibernation {cmd::admin}::
+ 		powercfg /h off			// toggle on:: powercfg /h on
+
+
+
+First try to change the boot order in BIOS (UEFI) settings.
+Select Ubuntu to be the default operating system to boot.
+
+If this is not possible boot into Windows and disable hibernation and Fast Boot.
+
+To disable hibernation open command prompt as administrator and execute this command:
+
+powercfg /h off  
+
+To disable Fast Boot open Control Panel (the old version - not the modern design),
+select the Energy Settings, enable show hidden settings and uncheck Fast Boot.
+
+After having done this shutdown the machine completely - do NOT reboot!
+
+Then reinstall the GRUB boot loader to your Ubuntu installation in EFI mode.
+
+Boot from the Ubuntu installation media - then open a terminal and execute:
+
+sudo mount /dev/sd*** /mnt
+sudo mount /dev/sd** /mnt/boot/efi
+for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done
+sudo chroot /mnt
+grub-install /dev/sd*
+update-grub  
+
+Now you can choose which operating system you want to boot from the GRUB boot loader menu.
+
+Note :
+
+sd* = disk | sd** = efi partition | sd*** = system partition
+
+To identify the partition numbers use GParted.
+The tool is included in the Ubuntu install media.
+

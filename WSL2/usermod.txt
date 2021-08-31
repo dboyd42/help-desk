@@ -1,0 +1,45 @@
+Modify User
+###########
+:Status: Resolved
+:Resolution: Powershell(change default user->root), log in, reverse prc.
+
+Change Username
+===============
+
+Issue
+-----
+
+To modify the user, you must kill the user and his processes.  To kill the user
+and his processes, you must log out.  If you log out, then you can't administer
+tasks.
+
+Resolution
+----------
+
+.. code-block:: Powershell
+
+	# Change default user to root
+	C:\> ubuntu config --default-user root
+	C:\> kali.exe config --default-user root
+
+.. code-block:: Bash
+
+	# Kill all Linux processes owned by user & forcefully log them out
+	pkill -9 -u username
+
+	# Rename and change username
+	usermod -l new-name old-name
+
+.. code-block:: Powershell
+
+	# Reset your default user back to your normal Linux user account
+	C:\> ubuntu config --default-user root
+	C:\> kali.exe config --default-user root
+
+Add User to Sudoers Group
+=========================
+
+.. code-block:: Bash
+
+	usermod -aG sudo username
+

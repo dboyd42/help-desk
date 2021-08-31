@@ -1,0 +1,6 @@
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721886(v=ws.10)
+
+set default boot manager to GRUG::
+
+
+bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi

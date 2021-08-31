@@ -1,0 +1,6 @@
+Open a file in MS Word from CLI
+===============================
+
+start "C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE" .\file.ext
+
+

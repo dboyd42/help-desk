@@ -1,0 +1,7 @@
+Show 'Hibernate' mode in Start Menu
+###################################
+
+Control Panel > Hardware and Sound > Power Options >
+"Choose what the power buttons do" >
+"Change settings that are currently unavailable" >
+[Checkbox] Hibernate 'Show in Power menu'

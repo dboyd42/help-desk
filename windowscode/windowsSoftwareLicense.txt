@@ -1,0 +1,11 @@
+https://www.howtogeek.com/245445/how-to-use-slmgr-to-change-remove-or-extend-your-windows-license/
+
+To display very basic license and activation information about the 
+current system, run the following command. This command tells you 
+the edition of Windows, part of the product key so you can identify it, 
+and whether the system is activated.
+
+slmgr.vbs /dli
+
+// more details
+slmgr.vbs /dlv	

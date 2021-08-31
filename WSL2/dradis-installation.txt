@@ -1,0 +1,37 @@
+Dradis Installation
+###################
+:Author: David Boyd
+:Date: 2020-12-23
+
+Dradis is a report generating SW that can import penTesting SW output files.
+
+Issue
+*****
+
+Git release (recommended)
+
+$ git clone https://github.com/dradis/dradis-ce.git
+$ cd dradis-ce/
+**$ ruby bin/setup**
+$ bundle exec rails server
+
+ruby bin/setup
+==============
+:Status: SOLVED
+:ENV: WSL2 > kali > kex
+
+Error
+-----
+
+`your ruby version is 2.7.2, but your gemfile specified 2.4.1`
+
+Solution
+--------
+:Location: dradis-ce/Gemfile
+
+Change line 5 from `ruby '2.4.1'` to `ruby '2.7.2`.
+
+More about Gemfiles: https://tosbourn.com/what-is-the-gemfile/
+
+*Note: See section 'Setting the version of a Gem'*
+

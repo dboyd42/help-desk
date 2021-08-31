@@ -1,0 +1,54 @@
+Users Don't Have Separate Desktops (8.1/10)
+###########################################
+
+Public Desktop Showing Instead of User Desktop When Logged In
+#############################################################
+:Status: SOLVED
+:Summary: Public\Desktop will display files on ALL user accounts.
+:Quick Fix: Link your ThisPC\Desktop folder to specified\folder
+
+Quick Fix Steps
+===============
+
+1. 	shell:ThisPCDesktopFolder
+2.	Rt-click>Properties>Location>Move 
+	C:\Users\x\OneDrive\Desktop
+	YES
+3.	Cut C:\Users\Public\Desktop\ C:\Users\<whoseverShitItIs>\Desktop\
+
+Notes
+-----
+[+] C:\Users\Public\Desktop
+    	- File explorer: View: Hidden [Checkbox]
+[+] Any files in the Public\Desktop folder will still be accessible from your\Desktop folder;
+	but your\Desktop files will NOT be viewable/shared to other users.
+
+
+Explanation
+===========
+
+Like the start menu, the desktop is also separated into different accounts, and there's a (shared) public folder which will display desktop icons for all accounts. If you add to, or delete from this folder, then the changes will be reflected in all accounts.
+
+Sometimes, programs install a shortcut to the user account desktop, other times they install to the shared public desktop.
+
+If you want to have different shortcuts on each account, then go to the
+C:\Users\GardenMan\Desktop
+folder and the
+C:\Users\TestUser\Desktop
+folder and edit the shortcuts for each individual account.
+
+If you want to add shortcuts to both accounts at the same time, go here:
+C:\Users\Public\Public Desktop
+
+Likewise, if you delete a shortcut from your desktop, and it happened to be from the shared public desktop, it will be deleted on all accounts.
+
+    How can I delete desktop shortcuts on one profile without it deleting them from another profile?
+
+That depends on where the shortcut is located, in the public desktop folder, or the user account desktop folder.
+
+The easiest way, move the shortcut from the public desktop folder to the user account desktop folder.
+
+...
+
+The Public desktop is part of what's going on. The icons you see on your Desktop are a combination of the Desktop folder in your profile, the Desktop folder for the Public/All Users profile, and the special My Computer/Recycle Bin/Network/etc icons chosen for your profile.
+

@@ -1,0 +1,12 @@
+1) Either download on computer that your reinstalling Windows
+	-OR-
+   Enter the service tag of the Dell computer that you'll be installing to
+
+https://www.dell.com/support/home/us/en/04/drivers/osiso/recoverytool/wt64a
+
+If this doesn't work,
+then go to 
+	product_key.txt 
+	&& 
+	download-win7-8-10-OS.txt
+

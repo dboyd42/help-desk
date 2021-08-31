@@ -1,0 +1,34 @@
+ERROR
+=====
+
+.. code-block:: bash
+
+	wsl2$ kex
+
+	Win-KeX server sessions:
+
+	X DISPLAY #	 RFB PORT #	  PROCESS ID
+	:1			  5901			57
+
+	You can use the Win-KeX client to connect to any of these displays.
+
+Solution
+========
+
+1. Have you tried turning it off and back on again?
+
+.. code-block:: powershell
+
+	# Make sure you save all your WSL work!
+	wsl --shutdown
+
+2. Re-open WSL
+
+Bonus
+=====
+
+.. code-block:: powershell
+
+	# list installed WSL distros with STATE status and version
+	wsl -l -v
+

@@ -1,0 +1,21 @@
+
+
+Step 1
+#######
+https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
+
+Generating SSH key in Cygwin::
+
+	follow the instructions on the website,
+	DO NOT COPY AND PASTE!
+
+Step 2
+#######
+can't connect to github via ssh
+http://stackoverflow.com/questions/32386975/ddg#32387182
+
+Did you try to add github as known host?
+
+If you have an existing known_hosts file and do not want to overwrite (as @Puce suggested in the comment), use this.
+
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts

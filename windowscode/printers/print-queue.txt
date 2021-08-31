@@ -1,0 +1,5 @@
+Clear Print Queue
+#################
+
+1. Printers & Scanners		-OR- 	1. Taskbar>Notification>Printer Right-Click	// Opens queue
+2. Printer > Open Queue

@@ -1,0 +1,9 @@
+Print Spooler
+#############
+
+Restart
+=======
+Reason: Printer Issues
+1) Win+R
+2) services.msc
+3) Print Spooler > Right-Click Restart

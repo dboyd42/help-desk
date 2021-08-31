@@ -1,0 +1,10 @@
+File is too Large to Transfer
+#############################
+Reason: File system formats only allow certain amounts of data to be transferred.
+	FAT32: 4GB
+
+1) 	# Fix disk errors	// replace 'z' for drive letter
+	cmd:\> chkdsk z:/f
+
+2) 	# Convert file system without losing data
+	convert z:/fs:ntfs

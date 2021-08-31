@@ -1,0 +1,10 @@
+Using System File Checker in Windows 10
+Applies to: Windows 10
+
+System File Checker is a utility in Windows 10 ﻿that checks for problems with files on your computer. To run it, follow these steps:
+
+    Make sure you've installed the latest updates for Windows 10, and then restart your machine. To find out more, read Update Windows 10.
+    In the search box on the taskbar, type Command Prompt, and right-click or press and hold Command Prompt (Desktop app) from the list of results. Select Run as administrator, and then select Yes.
+    Type DISM.exe /Online /Cleanup-image /Restorehealth (note the space before each "/"), and then press Enter. (Note: This step may take a few minutes to start and up to 30 minutes to complete.)
+    After you see a message that says "The operation completed successfully," type sfc /scannow (note the space between "sfc" and "/") and press Enter.
+    After you see a message that says, "Verification 100% complete," type exit.

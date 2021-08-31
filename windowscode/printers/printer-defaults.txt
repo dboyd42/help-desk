@@ -1,0 +1,9 @@
+Set Printer Defaults
+####################
+
+1. Printers and Scanners
+2. Printer > Manage
+3. Printer Properties
+4. Advanced > Printing Defaults...
+5. <Set Attributes>
+6. Save and Close

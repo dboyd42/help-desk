@@ -1,0 +1,16 @@
+Increase Maximum Volume In Windows
+##################################
+:URL: https://www.itechtics.com/increase-maximum-volume-windows-8/
+
+<Sound-Driver> Properties
+=========================
+:OS: Windows 8.1
+
+	Sound Icon > Mixer (Headphones Properties)
+	> Enhancements
+
+		[unchck] Bass Boost (unnecessary: frequencyRange, bass)
+		[unchck] Headhpone Virtualization (unnecessary: studio,jass,concert)
+		[chkbox] Loudness Equaliztion
+	> Apply
+	~= May need to refresh AV streaming webpage #YouTube.com

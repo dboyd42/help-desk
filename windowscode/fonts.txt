@@ -1,0 +1,12 @@
+Fonts
+#####
+:Author: David Boyd
+:Date: 2020-12-21
+
+Installation
+************
+
+1. Download fonts (zip, etc) && extract files.
+2. Control Panel > Appearance and Personalization > Fonts
+3. Drag 'n drop [extracted]*.tff -> Fonts
+

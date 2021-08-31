@@ -1,0 +1,13 @@
+OneDrive Not Syncing
+####################
+:Status: SOLVED
+:Summary: Win8>OneDrive_App>Sync/Problem (Shows Issue)
+
+Problems
+========
+
+Naming Length
+-------------
+:Problem: Files can't be uploaded/downlaoded because the path o a file/folder is too long.
+:Solution: Go to the OneDrive website to move the item to a different location or shorten its name.
+:MySolution: Deleted the fucking file.

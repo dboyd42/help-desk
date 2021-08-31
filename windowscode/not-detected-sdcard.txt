@@ -1,0 +1,11 @@
+https://www.gihosoft.com/windows-tips/sd-card-not-showing-up-windows-10.html
+
+Check SD Card in Disk Management
+================================
+
+If your SD card doesn’t show up in Windows 10 File System, but in Disk Management, check whether there is a drive letter for the card. Follow the steps below to add a drive letter:
+
+    Step 1. Right click “My Computer” and select “Disk Management”.
+    Step 2. In Disk Management, your SD card will appear as a removable disk. Check if it has a drive letter like D or E.
+    Step 3. If not, right click the SD card and select “Change Drive Letter and Paths”.
+    Step 4. Click “Add” and select a drive letter, then click “OK”. Your SD card would be working in File System along with local disks.

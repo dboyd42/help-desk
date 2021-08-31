@@ -1,0 +1,29 @@
+
+Windows 10
+
+//========================================
+//=== Chinese -> Traditional Chracters ===
+//========================================
+
+        Welcome to Microsoft Community.
+
+        In order to resolve this issue follow these steps:
+
+            In the Cortana box type ‘Region’.
+            Click on ‘Region and Language Settings’.
+            Click on ‘Add a Language’.
+            From the list of languages select Chinese Simplified.
+            Select Chinese (Simplified, China).
+            Click on Language pack available.
+            Click on Options button.
+            Wait for Download to complete.
+            Under Keyboards click on Add a keyboard
+            Click on Microsoft Pinyin Input method editor and choose the language editor of your choice.
+
+        Please check the above and let us know.
+
+        Thank you.
+
+    DIDN'T WORK ON MY COMPUTER, I STILL NEED ON SCREEN CHINESE TRADITIONAL KEYBOARD, PLEASE!
+
+What you need to do is click on Options in ??(???????)after you have added the language.  Then click on Microsoft Pinyin, and click on its Options.  Then choose "Traditional Chinese" in the Character set. 
