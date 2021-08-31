@@ -1,0 +1,8 @@
+CSM (Compatibility Support Module)
+
+
+"UEFI with CSM" usually means mixed mode in which both native (UEFI) and CSM-based (BIOS) boot is available. The boot menu will show a mix of native UEFI boot entries and CSM "bootable disk" entries in this case.
+
+However, one important side effect of disabling CSM is that it'll allow certain UEFI-only features to be activated (such as "fast boot"), at the same time preventing some BIOS-only features (such as PCI option ROM support).
+
+It is possible that "fast boot" (despite being made for Windows 10) is somewhat buggy and breaks the boot process.

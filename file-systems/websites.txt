@@ -1,0 +1,10 @@
+
+
+
+//============
+//=== Grub ===
+//============
+https://askubuntu.com/questions/696207/dual-boot-windows-10-and-ubuntu-grub-2-not-booting
+https://help.ubuntu.com/community/Boot-Repair
+https://www.lifewire.com/fix-uefi-bootloader-issues-when-dual-booting-2200655
+

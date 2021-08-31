@@ -1,0 +1,42 @@
+Extend Ext4 Partitions
+######################
+:URL: https://serverfault.com/questions/509468/how-to-extend-an-ext4-partition-and-filesystem
+
+Summary
+=======
+
+You must begin with the partition unmounted. If you can't unmount it (e.g. it's your root partition or something else the system needs to run), use something like System Rescue CD instead.
+
+    Run parted, or gparted if you prefer a GUI, and resize the partition to use the extra space. I prefer gparted as it gives you a nice graphical representation, very similar to the one you've drawn in your question.
+
+    resize2fs /dev/whatever
+
+    e2fsck /dev/whatever (just to find out whether you are on the safe side)
+
+    Remount your partition.
+
+While I've never seen this fail, do back up your data first!
+
+-----
+
+Note, on some VDS servers you could have non-primary root partition and need to resize Extended partition container first
+
+For example, you've just upgraded your plan and have something like:
+
+Disk /dev/vda: 83886080s
+Number  Start    End        Size       Type      File system  Flags
+1      2048s    194559s    192512s    primary   ext2         boot
+2      196606s  51197951s  51001346s  extended
+5      196608s  51197951s  51001344s  logical   ext4
+
+Here /dev/vda2 - is your Extended container. And /dev/vda5 - main partition that we need to resize to full available space.
+
+The simpliest way:
+
+apt-get -y install parted
+parted /dev/vda unit s print all # print current data for a case
+parted /dev/vda resizepart 2 yes -- -1s # resize /dev/vda2 first
+parted /dev/vda resizepart 5 yes -- -1s # resize /dev/vda5
+partprobe /dev/vda # re-read partition table
+resize2fs /dev/vda5 # get your space
+
