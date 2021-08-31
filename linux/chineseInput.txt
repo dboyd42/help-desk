@@ -1,0 +1,12 @@
+https://gangmax.me/blog/2017/10/20/setup-chinese-input-method-in-ubuntu-18-dot-04/
+
+
+Here is the instructions how to setup Chinese input method in Ubuntu Artful.
+
+    First, go to “Language Support”, make sure the “Chinese(simplified)” or “Chinese Traditional”(or both) is installed completely.
+
+    Go to “Input Method”, make sure you select “ibus” as the selected user configuration. An user logout may be required.
+
+    Go to “Settings -> Region & Language”, in the “Input Sources” section, add the “Chinese(Pinyin)” input method. You can also choose some other Chinese input methods here from the candicate list. For me I like to use “ibus-pinyin” input method which is installed by the “sudo apt-get install ibus-pinyin” command.
+
+Now you should be able to see the input method icon “en/拼” on the top left corner of the desktop. Use “Super + Space” to switch the input method as normal.

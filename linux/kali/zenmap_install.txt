@@ -1,0 +1,61 @@
+Zenmap Install
+##############
+:URL: https://lifars.com/2020/01/zenmap-installation-guide-kali-linux-2019-4/
+:Status: SOLVED
+:Reason: Zenmap is no longer being maintained upstream (Kali has rm w/ the release of 2019.4)
+
+WSL Resolution
+==============
+
+.. code-block:: Bash
+
+	mkdir -p ~/Downloads/zenmap
+	cd ~/Downloads/zenmap
+
+	wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
+	wget http://archive.ubuntu.com/ubuntu/pool/universe/n/nmap/zenmap_7.80+dfsg1-1build1_all.deb
+
+	sudo apt install ./*.deb
+
+Non-WSL Resolution
+==================
+
+1.	Download Zenmap > Optional Zenmap GUI (all platforms)
+	https://nmap.org/download.html
+
+2.	Convert .rpm file using Alien to a .deb file
+	sudo apt install alien -y
+	alien zenmap-7.80-1.noarch.rpm
+
+3.	sudo dpkg -i zenmap_7.80-2_all.deb
+
+4. Change permissions
+	sudo chmod +x *.deb
+
+5.	# Install with apt using file flag and ./path
+	sudo apt install -f ./zenmap_7.80-2_all.deb
+
+6.	Congratulations, Zenmap is now installed!  (Run with root privileges!)
+
+Troubleshooting
+===============
+
+**WSL**
+
+/usr/bin/env: 'python': No such file or directory
+--------------------------------------------------
+:Status: Resolved -> Leads to 'No module named gtk' issue
+:Reason: Python2 is not installed
+:Resolution: sudo apt install python -y
+
+Could not import the zenmapGUI.app module: 'No module named gtk'
+----------------------------------------------------------------
+:Status: Unresolved
+:Reason: python-gtk2 module has been removed from kali & ubuntu sources.list
+:Workaround: GOTO Line 7
+
+
+
+
+
+

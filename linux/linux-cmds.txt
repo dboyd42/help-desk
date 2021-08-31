@@ -1,0 +1,229 @@
+
+//--- Tree ------------------------------------------------------------------------------
+:Display directories
+tree
+	-p // permissions
+
+//--- MkDir: Nested ---------------------------------------------------------------------
+mkdir -p dir1/{{nest1/n1a},nest2}
+	-p // parent directory
+
+
+//--- Change Hostname (Computer Name) ---------------------------------------------------
+sudo vim /etc/hostname
+sudo vim /etc/hosts
+sudo hostname newName
+
+//============================
+//=== Open a Folder in GUI ===
+//============================
+
+$ nautilus /<dir>/<dir>		// path always reverts to root "~"
+
+//======================
+//=== Display Photos ===
+//======================
+
+# display <fileName.ext>
+
+//================
+//=== Repeater ===
+//================
+NOTE: A hotspot (access point) needs to be wired to your network. A repeater extends a Wifi signal without being physically attached to the network via ethernet. It just receives Wifi frames and retransmits them, extending the range of an access point which is connected to the physical network.
+
+
+// Kali
+$ nm-connection-editor
+	->Add
+	->Wi-Fi
+		Connection name: <" ">
+		SSID: <"name of wifi hotspot">
+		Mode: Hotspot
+
+		->Wi-Fi Security
+			Security: WPA & WPA2 Personal
+			Password: <"pwd">
+
+		->Save
+
+//=====================
+//=== Find / Search ===
+//=====================
+
+$ find /path/to/folder/ -iname *file_name_portion*
+$ find . -iname <name>*		// . = searches all of current directory # best if used '$ cd ~' first
+				// -iname = searches best match case 'insensitive' # regardless of caps
+				// "<name>" || '<name>' || *<name>* || <name>*
+				// * = searches for ALL files with <name> in them
+				// -name = Case SENSITIVE
+
+# Prune a path
+--------------
+:Note: Must succeed search path
+
+    $ find / -path /mnt -prune -iname "*.txt"
+
+
+//===================
+//=== Format Disk ===
+//===================
+
+$ fdisk -l		// format disk -list
+$ umount /dev/sdb1	// umount <fileDir/disk>  # usually last one
+$ mkfs.fat /dev/sdb1	// makeFileSystem.fat <NTFS, w/e> <drive>
+
+//=================================
+//=== Create Bootable USB Drive ===
+//=================================
+
+$ ls blk		// list blocks // blocks are drives and partitions
+$ umount /dev/sdb1	// umount <drive>
+$ cd Downloads		// change directory to imgFile
+$ dir			// dir=ls, with the exception it replaces '\' <-> <space>
+$ dd if=fileName.iso of=/dev/sdb1 bs=1M
+			// dd = "data duplicator": used for copying & converting data
+			// if = inputFile
+			// of = outputFile
+			// bs = blockSize
+$ eject /dev/sdb1	// ejects the drive
+
+// https://superuser.com/questions/797664/whats-the-difference-between-dds-command-options-bs-1024-count-l-and-bs-l-count
+
+//====================================
+//=== Rotate Screen to Normal Mode ===
+//====================================
+
+$ xrandr - o normal
+
+//===================
+//=== Compile C++ ===
+//===================
+
+$ g++ -std=c++1z -o prgmTest *.cpp
+
+//===============
+//=== Aliases ===
+//===============
+
+$ vim ~/.bash_aliases		// create aliases files
+//------------------		// inFile
+$ alias <name>=<command>	// alias = linux keyword
+				// <name> = new terminal's shortcut command name
+				// <command> = actual linux command
+ie) $ alias aliases=vim ~/.bash_profile		// opens usr created alias file
+    $ alias com=g++ -std=c++1z -o prgmTest *.cpp	// enter 'com' to compile c++ in terminal
+
+//=====================
+//=== Here Document ===
+//=====================
+
+$ cat > <name>.<ext> << EOF 	// EOF = end of file <delimeter>
+> some text
+> to save
+> EOF
+
+//------------------------------------------------------
+//--- input single/multi line of code && create file ---
+//------------------------------------------------------
+$ echo "Some text here." > newFile.txt		// this will overwrite!
+$ echo "1st line of code <enter>
+> 2nd line of code <enter>
+> 3rd line of code > newFile.txt		// writes m_lines of code
+
+//--- Append lines of code in file wo opening file ---
+cat >> <fileName.ext> << EOF
+> appended line
+> another appended line
+> EOF
+
+//======================================
+//=== Copy File from User to Another ===
+//======================================
+
+# Open the file for secondUser as firstUser and have secondUser inhereit that file descriptor
+# As a security measure, sudo will close all file descriptors except 0, 1, & 2:
+# however, that's all you need (you can explicitly allow inheritance for more file descriptors).
+
+$ sudo -u secondUser < /home/firstUser/file sh -c 'cat > /home/secondUser/file'
+
+//---------------------
+//-[WARN]->NON-SECURE->
+//->Cp the file through an 'intermediate world-readable location' such as '/tmp/'
+//-and change the permissions of the file to world-readable.
+
+$ cpy file /tmp/
+$ chmod a+r /tmp/file
+$ sudo -u secondUser cp /tmp/file ~secondUser
+$ rm /tmp/file
+//---------------------
+
+
+//=========================
+//=== Find IP Addresses ===
+//=========================
+
+//--- website ip addresses -----------------------------------------------------
+dig <website>
+nslookup <website>
+host <website>
+ping <website>
+
+//--- personal ip address ------------------------------------------------------
+$ ifconfig 	# local ip->'inet'
+$ hostname -I	# displays local, public
+/bin/bash: wq: command not found
+# *this address gives away location!
+$ curl ifconfig.me
+$ curl icahhazip.com
+$ curl ident.me
+$ curl bot.whatismyipaddresss.com
+
+//======================================
+//=== Refresh Rate/Monitor Frequency ===
+//======================================
+$ xrandr			// checks available modes
+$ xrandr -s 1440x900 -r 75	// pick mode, incl resolution & refresh rate
+$ xrandr -r 75			// or just the refresh rate
+$ xrandr			// check selection (should have a '+')
+
+//=============================
+//=== En/Disable Wifi Cards ===
+//=============================
+$ ifconfig			# check settings
+$ ifconfig wlan0 down		# usually internal is wlan0
+$ ifconfig wlan0 up		# turn wifi card on again
+			# Note: Network Manager still shows adapter as on.
+
+
+//===================
+//=== MAC Address ===
+//===================
+$ ethtool -P wlp2s0
+    [P = Permanent addr]
+
+#--------OR---------#
+
+$ ifconfig
+    [ether xx:xx:xx:xx:xx:xx]
+
+
+
+
+
+
+<tags> network,
+//===================
+//===
+//==================
+//===================
+//===
+//==================
+//===================
+//===
+//==================
+//===================
+//===
+//==================
+
+
+# END OF FILE

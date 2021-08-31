@@ -1,0 +1,4 @@
+about:config
+
+    javascript.enabled  | Toggle
+    network.captive-portal-service.enabled | Toggle

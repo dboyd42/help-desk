@@ -1,0 +1,19 @@
+Bash Completion Not Working
+############################
+:Issue: Stack Smashing error after tabbing for auto-completion
+:Reason: Who knows?
+:Status: Resolved 
+:Solution: Reinstall
+
+Installation
+============
+
+sudo apt install bash-completion
+
+
+Troubleshooting
+===============
+
+sudo apt install --reinstall bash-completion
+
+

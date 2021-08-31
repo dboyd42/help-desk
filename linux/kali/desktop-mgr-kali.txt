@@ -1,0 +1,51 @@
+How To Switch Desktop Environments (DE) for Kali Linux
+##################################################
+URL: https://dannyda.com/2020/02/21/how-to-switch-desktop-environments-for-kali-linux-easily/
+Purpose: Run displayLink for multi-monitors
+
+Settings
+========
+Kali: Xfce
+Chg To: Gnome
+
+Steps
+=====
+sudo tasksel
+<Highlight DE><Space>
+<Ok>
+
+sudo update-alternatives --config x-session-manager
+<Select # to corresponding DE>
+sudo reboot now
+
+Difference(display mgr, de)
+===========================
+URL: https://askubuntu.com/questions/857471/whats-the-difference-between-desktop-managers-and-display-managers
+
+Display mgr
+    - a GUI that is displayed at the end of the boot process in place of the default shell.
+
+Ie)
+    GDM — Gnome display manager.
+    LightDM — Cross-desktop display manager.
+    LXDM — Lxde display manager. 
+    SDDM — QML-based display manager and successor to KDE4's kdm.
+    SLiM — Lightweight graphical login solution.
+    XDM — X display manager with support for XDMCP
+
+DE 
+    - an implmentation of the desktop metaphor made of a bundle of prgms running on top of an OS which share a common GUI.
+
+Ie)
+    Unity is the default desktop for Ubuntu, and is one of the major desktop environments.
+    Gnome is other of the major desktop environments.
+    KDE is other of the major desktop environments.
+    Xfce is a much lighter desktop environment.
+    LXDE is arguably the lightest option available for a desktop environment.
+    Cinnamon is another alternative to Gnome.
+    MATE is a continuation of the Gnome 2 codebase.
+    Budgie is the default desktop of Solus Operating System.
+    Moksha is a continuation of the Enlightenment 17 desktop.
+    Enlightenment started as a project to build a desktop environment.
+    Pantheon is the project developed by the elementaryOS team.
+    Trinity is a continuation of the KDE 3 series. 

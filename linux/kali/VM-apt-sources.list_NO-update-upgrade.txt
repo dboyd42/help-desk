@@ -1,0 +1,11 @@
+Sources.list Hash Mismatch --OVA
+################################
+:URL:https://forums.kali.org/showthread.php?48822-Kali-2020-2-OVA-VIRTUALBOX-HASH-SUM-MISMATCH
+
+.. code-block:: Bash
+
+	sudo bash
+
+	mkdir /etc/gcrypt
+	echo all >> /etc/gcrypt/hwf.deny
+	sudo apt-get update

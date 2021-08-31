@@ -1,0 +1,26 @@
+BIOS Settings
+#############
+
+All these configurations are done in the bios settings.  To access BIOS using a Dell, press F12 during the Dell Logo screen.
+
+Ubuntu Bootloader
+=================
+:Problem1: Grub bootloader not loading / computer's loading directly into Windows.
+:Problem2: Computer not detecting nor giving the option to boot into Ubuntu.
+
+.. code-block::
+
+	To run linux-bootloader over windows:
+	   Settings->general->boot sequence:
+	        Add Boot Option:
+	            Directories->EFI->Ubuntu:
+	                - shimx64.efi       // use for 'secure boot enabled' settings
+	                - grubx64.efi       // use for regular boot settings
+	                - fwupx63.efi       // a tool used to assist with updating the computer's firmware
+	                - grub.cfg          // grub 2's configuration file produced from various scripts
+	                - mmx64.efi         // MokManager
+	                - BOOTX64.CSV       //
+
+	        1. Add either shimx64.efi or grubx64.efi based on your BIOS settings and 'name' it.
+	        2. Change the boot sequence by selecting 'name' and using the arrows to move to top of list.
+
