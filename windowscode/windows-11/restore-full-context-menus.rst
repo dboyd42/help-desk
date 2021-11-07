@@ -15,6 +15,7 @@ Procedure
 2. Navigate to HKEY_CURRENT_USER\Software\Classes\CLSID
 3. Right-click > New > Key and paste this in the name: {86ca1aa0-34aa-4e8b-a509-50c905bae2a2}
 4. With the new key you just created highlighted, again right-click > New > Key, and paste in this name: InprocServer32
+
 5a. Double-click the (Default) registry entry and then hit Enter without typing anything to set its value to blank. Before making this change, you'll see under the Data column that it says (value not set), but once you hit Enter it'll show nothing.
 
 	5b. If Data doesn't show anything, manually type: (value not set)
