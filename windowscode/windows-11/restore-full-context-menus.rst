@@ -8,7 +8,7 @@ Purpose
 
 Restores the right-click context menu to Windows 10 with more options.
 
-:image: ./pics/full-context-menu.png
+.. image:: ./pics/full-context-menu.png
 
 Procedure
 =========
