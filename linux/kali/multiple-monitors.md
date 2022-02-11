@@ -95,6 +95,6 @@ In GNOME's display manager,
 
 <!-- links                                                                  -->
 
-[1]: [https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu-5.5-Beta?filetype=exe]
+[1]: (https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu-5.5-Beta?filetype=exe)
 [2]: [https://github.com/AdnanHodzic/displaylink-debian/blob/master/post-install-guide.md]
 
