@@ -9,7 +9,7 @@
 **:exclamation:I'm using GNOME for my desktop manager:exclamation:**
   - Therefore, I don't know if this'll work with the default Xfce layout.  If
     you want to switch to Gnome, then follow this
-    [guide.](#./desktop-mgr-kali.txt)
+    [guide](./desktop-mgr-kali.txt)
 
 ## Requirements
 
@@ -30,14 +30,14 @@
 ### 1. Install DisplayLink Driver
 
 
-1. Install [DisplayLink USB Graphics Software for Ubuntu (Beta)(5.5 Beta)][d]
+1. Install [DisplayLink USB Graphics Software for Ubuntu (Beta)(5.5 Beta)][1]
 2. Extrac the zip folder
 3. Run the `displaylink-driver-5.5.0-beta-59.118.run` as `sudo`
 4. Restart computer
 
 ### 2. Display Detection
 
-> This section is copy and pasted from @AdnanHodzic's [Post-Install-Guide][p]
+> This section is copy and pasted from @AdnanHodzic's [Post-Install-Guide][2]
 
 Only do this in case your monitors weren't automatically detected.
 
@@ -91,10 +91,10 @@ In GNOME's display manager,
 1. Select the 3rd screen from the drop down menu.
 2. Enable the screen by toggling the switch to the right of the drop-down menu.
 
-# 4. :champage:Enjoy Your Multiple Monitors!:champage:
+# 4. :champagne:Enjoy Your Multiple Monitors!:champagne:
 
 <!-- links                                                                  -->
 
-[d]: [https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu-5.5-Beta?filetype=exe]
-[p]: [https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu-5.5-Beta?filetype=exe]
+[1]: [https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu-5.5-Beta?filetype=exe]
+[2]: [https://github.com/AdnanHodzic/displaylink-debian/blob/master/post-install-guide.md]
 
