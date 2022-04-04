@@ -59,9 +59,11 @@ $ find . -iname <name>*		// . = searches all of current directory # best if used
 
 # Prune a path
 --------------
+:URL: https://www.liamdelahunty.com/tips/linux_find_prune_directory.php
+:URL: https://www.liamdelahunty.com/tips/linux_find_exclude_multiple_directories.php
 :Note: Must succeed search path
 
-    $ find / -path /mnt -prune -iname "*.txt"
+    $ find / -path /mnt -prune -iname "*.txt" -o -print
 
 
 //===================
