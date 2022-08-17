@@ -1,6 +1,42 @@
 Connect USB Wireless Adapter to Kali in VBox
 #############################################
 :URL: https://www.youtube.com/watch?v=K1ETBeRQBs4
+:Updated: 2022-08-16
+
+# [Issue] No Detected USBs Appear in VM > Settings > USB
+
+OS: Ubuntu 20.04
+
+Solution:
+  - `sudo adduser $USER vboxusers`
+
+# Bonus:
+
+```
+# Get associated USB bus & device id
+lsusb
+# Get WiFi adapter's verbose information
+lsusb -s [bus:][devID] -v
+```
+
+```
+# Output highlights
+#field          value       # Comments
+bcdUSB          2.00        # Highest USB support from device
+idVendor        0x1348f     Ralink Technology, Corp.
+idProduct       0x5572      RT5572 Wireless Adapter
+iManufacturer   Ralink
+iProduct        802.11 n WLAN
+```
+
+```
+# Get device USB Controller generations from Hardware
+sudo lshw -short | grep usb
+[<<] # OUTPUT: 
+    OHCI = USB 1.0+
+    EHCI = USB 2.0+
+    xHCI = USB 3.0+
+```
 
 Fix
 ===
