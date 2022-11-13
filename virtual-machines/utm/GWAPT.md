@@ -3,8 +3,8 @@
 
 ## Settings Quicklook
 
-username: student\b
-password: Security542
+username: `student`<br>
+password: `Security542`
 
 ### Overview
 
