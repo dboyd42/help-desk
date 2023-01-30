@@ -1,0 +1,45 @@
+# Virt-Manager && LibVert Setup
+
+> Date: 2023-01-30
+
+## Host Machine
+
+### Network Setup
+
+``` bash
+# Networking
+yay -S ebtables dnsmasq
+
+# Manually Start/Destroy Virtual Adapters
+sudo virsh net-start default
+sudo virsh net-destroy default
+
+# Enable Virtual Adapters upon Start-Up
+sudo virsh net-autostart default
+# Start Virtual Adapter (if not already started)
+sudo virsh net-start default
+```
+
+### QEMU
+
+``` bash
+# Install QEMU tools
+install qemu-full
+```
+
+## Guest Machines
+
+> Virt-Manager's default VDI (virtual desktop infra) uses Spice
+
+``` bash
+# Install Spice agent
+apt install spice-vdagent
+
+# Enable and start agent
+systemctl enable --now spice-vdagent
+
+# Fix the virtual display to fit window
+xrandr --output Virtual-1 --auto
+## OPTIONAL -persistence
+echo "xrandr --output Virtual-1 --auto" >> ~/.bashrc
+```
