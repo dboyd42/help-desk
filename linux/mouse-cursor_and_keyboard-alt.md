@@ -19,17 +19,17 @@ System Settings:
 
 The left `Alt` was not working when running Emacs shortcuts in terminal.  This
 was validated with and preset and custom shortcuts such as `Alt` + `Tab` to
-switch applications.  This applied to the rigt `Alt` as well.
+switch applications.  This applied to the right `Alt` as well.
 
 ### Root Cause
 
-The root cause was found to be an issue in
-[keyd](https://github.com/rvaiya/keyd) as fixed in issue
-[#441](0fb86d3a95f0c91a4266391d05158cfd5dd4500f).  When the G305 mouse receiver
-was plugged in, the Keyd service took over the mouse controls and incorrectly
-identified and modified the keyboard layout.
+Most likely a hardware issue as the solutions to the probable causes did not
+fix the issue upon reboot.  Long story short, this laptop was dropped from a
+second floor onto a tile floor and everything came loose (yet surprisingly
+still functional) thus requiring all the internal connections to be
+re-slotted/reconnected: RAM, keyboard, touchpad, etc.
 
-#### Probable Causes
+#### Other Probable Causes
 
 Previous possible factors that may have affected the non-registering key:
 
@@ -37,12 +37,26 @@ Previous possible factors that may have affected the non-registering key:
 - Troubleshooting the Logitech G305 mouse (no movement, but buttons work)
   - Enabling/disabling `logid.service`
   - Running/closing Piper (mouse controls)
+  - An issue in [keyd](https://github.com/rvaiya/keyd) was fixed in issue
+  [#441](0fb86d3a95f0c91a4266391d05158cfd5dd4500f).  When the G305 mouse
+  receiver was plugged in, the Keyd service took over the mouse controls and
+  incorrectly identified and modified the keyboard layout.
 
 ## Solution
 
-### G305 Cursor Solution
+## 1. Reconnect Keyboard Ribbon
 
-Update the [Keyd] program:
+1. Open laptop and disconnect battery.
+2. Remove keyboard ribbon and reconnect.
+3. Reconnect battery
+4. Boot and verify functionality
+5. Reboot and verify functionality
+
+If problem persists, proceed to solution #2.
+
+### 2. G305 Cursor Solution
+
+Update the Keyd program:
 
 1. Go to [Keyd's Github page](https://github.com/rvaiya/keyd) and follow the
    instructions to install.
@@ -50,10 +64,9 @@ Update the [Keyd] program:
 Your configuration files will still remain and be active upon enabling the
 service.
 
-### Previous Solution
+If problem persists, proceed to solution #3.
 
-If the previous solution did not fix the `Alt` key, perform a reboot and test
-again. Otherwise, continue to the solution for the `Alt` key below:
+### 3. Reset KDE's Keyboard Settings' Layouts
 
 ***Note: The original solution order was resetting KDE's keyboard layout below,
 and then applying the update to the Keyd service.  By doing this second, it
@@ -85,6 +98,10 @@ Reset and switch keyboard layout in KDE's Settings:
 4. Verify the 'Alt' key functionality.
 
 ## Preventive Measures
+
+1. Don't drop laptop.
+2. Be weary of updates/upgrades and their affects on 3rd party services and
+   programs, and desktop environment settings.
 
 By updating the Keyd service, the mouse malfunction should work from here on
 out.
