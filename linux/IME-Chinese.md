@@ -11,6 +11,7 @@ Integrate Chinese input via Pinyin on Arch Linux.
 |-----------|----------------------------|
 | Platform: | Arch Linux                 |
 | DE:       | KDE Plasma                 |
+| WE:       | X11                        |
 | IME/IMF:  | fcitx5                     |
 
 ## Conflicts
