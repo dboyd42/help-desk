@@ -8,7 +8,7 @@
 Integrate Chinese input via Pinyin on Arch Linux.
 
 | Status:   | :heavy_check_mark: Running |
-|-----------|----------------------------|
+|----------:|----------------------------|
 | Platform: | Arch Linux                 |
 | DE:       | KDE Plasma                 |
 | WE:       | X11                        |
@@ -36,14 +36,14 @@ Integrate Chinese input via Pinyin on Arch Linux.
    fcitx5-pinyin-zhwiki`
 2. Add environment variables to bashrc/zshrc file:
 
+    :pencil2: The [Arch Wiki][aw5] will state to not append the `5`, but this appears
+    to have no adverse effect.
+
     ``` bash
-    export GTK_IM_MODULE=fcitx5
+    GTK_IM_MODULE=fcitx5
     QT_IM_MODULE=fcitx5
     XMODIFIERS=@im=fcitx5
     ```
-
-    :penci2: The Arch Wiki will state to not append the '5', but this appears
-    to have no adverse effect.
 
 3. Configure Pinyin keyboard:
     1. **Navigate to Fcitx 5:** System Settings > Regional Settings > Add
@@ -159,4 +159,13 @@ Integrate Chinese input via Pinyin on Arch Linux.
 
 - **System Settings > Shortcusts > Keyboard Layout Switcher:** None.
 - **Hardware > Input Devices > Keyboard > Layouts:** English (US) only.
+
+## Further Reading Material
+
+- [IMEs and IMFs (wiki.archlinux.org)][awim]
+- [FCITX5 (wiki.archlinux.org)][aw5]
+
+[aw5]: <https://wiki.archlinux.org/title/Fcitx5>
+[awim]: <https://wiki.archlinux.org/title/Input_method>
+
 
