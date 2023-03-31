@@ -42,15 +42,15 @@ may first need to add a connection, then enable the connection.
 # Networking
 yay -S ebtables dnsmasq
 
-# Manually Start/Destroy Virtual Adapters
-sudo virsh net-start default
-sudo virsh net-destroy default
 
-# Enable Virtual Adapters upon Start-Up
+# Method #1: Enable Virtual Adapters upon Start-Up
 sudo virsh net-autostart default
+
+# Method #2: Manually Start/Destroy Virtual Adapters
 # Start Virtual Adapter (if not already started)
 sudo virsh net-start default
-
+# Stop Virtual Adapter
+sudo virsh net-destroy default
 ```
 
 ### QEMU
