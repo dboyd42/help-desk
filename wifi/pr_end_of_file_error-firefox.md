@@ -32,10 +32,12 @@ specific** error.
 :bulb: If you running into an issue of connecting to the captive portal, try:
 
 1. Go to Firefox's [auto detect captive portal][ff-cp-detect]
-2. Bennu's Coffee House specfic [deepcoolclear captive portal][dcc-cp]
+2. Bennu's Coffee House specfic [deepcoolclear captive portal (1)][dcc-cp-1] or
+   [here][dcc-cp-2]
 
 <!-- Reference Links -->
 
 [kinsta]: https://kinsta.com/knowledgebase/pr-end-of-file-error/
 [ff-cp-detect]: http://detectportal.firefox.com/canonical.html
-[dcc-cp]: https://login.deepcoolclear.com/BennuPP/index.php?cok=0mupodjp59m2emngmhfi83q2bf&st=6689jn8ot2t88750dgj7syai8y3mti&pda=0&vsc=&ipaddr=172.16.0.184&tod=1232&noc=noc&vlan=
+[dcc-cp-1]: https://login.deepcoolclear.com/BennuPP/index.php?cok=0mupodjp59m2emngmhfi83q2bf&st=6689jn8ot2t88750dgj7syai8y3mti&pda=0&vsc=&ipaddr=172.16.0.184&tod=1232&noc=noc&vlan=
+[dcc-cp-2]: https://login.deepcoolclear.com/BennuPP/
