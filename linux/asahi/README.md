@@ -28,11 +28,12 @@ curl https://alx.sh | sh
 
 ### Step 2: Post-Arch Installation
 
-1. My personal guide can be found *[here][basic-arch-install]*.
+1. My personal guide can be found *[here][basic-arch-install]*. :warning: It's
+   a bit of a mess at the moment.
 
 ### Step 3: Upgrade the GPU Drivers
 
-1. Install Wayland (:bulb: X11 has noticable screen tearing :()
+1. Install Wayland (:warning: X11 has noticable screen tearing :dizzy_face:)
 
 ``` bash
 # Synchronize and update all packages
@@ -48,7 +49,7 @@ sudo pacman -S wl-clipboard
 
 The M1 GPU driver support *doesn't* come pre-installed as I'm sure these
 drivers are prone to issues (albeit not having come across any myself... yet
-:P). Check out the official articles and instructions [here][gpu-drivers] and
+:pray:). Check out the official articles and instructions [here][gpu-drivers] and
 [here][road-to-vulkan].
 
 ```
@@ -62,4 +63,4 @@ sudo update-grub
 [asahi-install]: https://asahilinux.org/2022/03/asahi-linux-alpha-release/
 [basic-arch-install]: ../arch-linux/README.md
 [gpu-drivers]: https://asahilinux.org/2022/12/gpu-drivers-now-in-asahi-linux/
-[road-vulkan]: https://asahilinux.org/2023/03/road-to-vulkan/
+[road-to-vulkan]: https://asahilinux.org/2023/03/road-to-vulkan/
