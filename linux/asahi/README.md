@@ -9,6 +9,7 @@
   - [Step 1: Installing Asahi](#step-1-installing-asahi)
   - [Step 2: Post-Arch Installation](#step-2-post-arch-installation)
   - [Step 3: Upgrade the GPU Drivers](#step-3-upgrade-the-gpu-drivers)
+- [Tips and Best Practices](#tips-and-best-practices)
 
 ## Steps
 
@@ -58,6 +59,10 @@ sudo pacman -S linux-asahi-edge mesa-asahi-edge
 # Update grub so you won't boot into Zork
 sudo update-grub
 ```
+## Tips and Best Practices
+
+After reboot, lower the resolution to a more comfortable setting by going to
+`Settings` > `Hardware` > `Display and Monitor` > `Scale` > `150%`.
 
 <!-- Reference Links -->
 [asahi-install]: https://asahilinux.org/2022/03/asahi-linux-alpha-release/
