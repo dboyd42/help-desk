@@ -10,7 +10,7 @@
 
 ``` bash
 # 1. Install programs
-pacman -S libvirt qemu-kvm bridge-utils
+pacman -S iproute2 qemu-full virt-manager
 
 # 2. Enable libvert service
 systemctl enable --now libvirtd
@@ -18,6 +18,10 @@ systemctl enable --now libvirtd
 # 3. Add yourself to the libvert group
 sudo usermod -aG libvirt $USER
 ```
+
+- :warning: [`bridge-utils`][butils] has been replaced with `iproute2`
+- :warning: `qemu-kvm` in not in the pacman repo, use `qemu-full`
+- :bulb: `libvirt` is included in the `virt-manager` package
 
 ### Network Setup
 
@@ -76,3 +80,6 @@ xrandr --output Virtual-1 --auto
 ## OPTIONAL -persistence
 echo "xrandr --output Virtual-1 --auto" >> ~/.bashrc
 ```
+
+<!-- Reference Links -->
+[butils]: https://wiki.linuxfoundation.org/networking/bridge
