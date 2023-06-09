@@ -1,9 +1,0 @@
-Partitioning
-============
-
->Installation Type
-------------------
-
-1) Reformat free space to ext4
-
-Device for boot loader installation: <same partition as installation>
