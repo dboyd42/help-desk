@@ -11,6 +11,8 @@
 ``` bash
 # 1. Install programs
 pacman -S iproute2 qemu-full virt-manager
+# Windows Drivers ISO
+yay -S virtio-win
 
 # 2. Enable libvert service
 systemctl enable --now libvirtd
@@ -57,14 +59,9 @@ sudo virsh net-start default
 sudo virsh net-destroy default
 ```
 
-### QEMU
-
-``` bash
-# Install QEMU tools
-install qemu-full
-```
-
 ## Guest Machines
+
+### Linux Distros
 
 > Virt-Manager's default VDI (virtual desktop infra) uses Spice
 
@@ -80,6 +77,26 @@ xrandr --output Virtual-1 --auto
 ## OPTIONAL -persistence
 echo "xrandr --output Virtual-1 --auto" >> ~/.bashrc
 ```
+
+### Windows Boxes
+
+#### Issues:
+
+- Can't scale to Window even after changing the Display type and installing
+most and pseudo-random drivers.
+
+#### TODO (add instructions)
+
+- Pre-Installation:
+  - CPU:
+    - XML > clock; && change to "yes"
+  - Storage:
+    - Change SATA -> VirtIO
+  - Add HW:
+    - CDROM > drivers.iso
+- Post-Install:
+  - Drivers:
+    - drivers.iso > x64.msi
 
 <!-- Reference Links -->
 [butils]: https://wiki.linuxfoundation.org/networking/bridge
