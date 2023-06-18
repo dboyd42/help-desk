@@ -3,22 +3,22 @@
 **Author:** David Boyd<br>
 **Date:** 2021-08-31
 
-| Status   | Resolved                       |
+| Status   | :heavy_check_mark: Resolved    |
 |----------|--------------------------------|
 | REF:     | [Dell Community Support][dell] |
 | OS:      | Windows 10                     |
 | Mfg:     | Dell                           |
 | Product: | XPS 9370                       |
 
-## Solution: Performe a motherboard reset
+## Solution: Perform a motherboard reset
 
-### Step 1) Shutdown
+1. Shutdown
 
-### Step 2) Remove power cord
+2. Remove power cord
 
-### Step 3) Hold power-button for 10secs
+3. Hold power-button for 10secs
 
-### Step 4) Re-insert power cord and power-on
+4. Re-insert power cord and power-on
 
 <!-- References -->
 
