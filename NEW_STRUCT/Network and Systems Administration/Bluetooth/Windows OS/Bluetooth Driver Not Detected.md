@@ -3,12 +3,12 @@
 **Author:** David Boyd<br>
 **Date:** 2021-08-31
 
-| Status   | :heavy_check_mark: Resolved    |
-|----------|--------------------------------|
-| REF:     | [Dell Community Support][dell] |
-| OS:      | Windows 10                     |
-| Mfg:     | Dell                           |
-| Product: | XPS 9370                       |
+| Status   | :heavy_check_mark: Resolved        |
+|----------|------------------------------------|
+| REF:     | [Dell Community Support][dell-dnd] |
+| OS:      | Windows 10                         |
+| Mfg:     | Dell                               |
+| Product: | XPS 9370                           |
 
 ## Issue
 
