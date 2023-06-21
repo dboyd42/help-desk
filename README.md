@@ -31,8 +31,8 @@ root directory. But to each their own!
 - [Cloud Computing][c-cc]
   - Subcategories:
     - [OneDrive][c-cc-onedrive]
-  - Tags: `cloud migration`, `onedrive`, `scalability`, `cost optimization`,
-          `service-level agreements (SLAs)`, `cloud governance`, `aws`
+  - Tags: `onedrive`
+
 - [Cybersecurity][c-cs]
   - Deals with protecting computer systems, networks, and data from
   unauthorized access, breaches, and other security threats. It includes areas
@@ -41,17 +41,16 @@ root directory. But to each their own!
     - Subcategories: 
       - [Network Security][c-cs-ns]
       - [Web Application Security][c-cs-was]
-    - Tags: `firewall`, `intrusion detection system (ids)`, `owasp top 10`,
-            `penetration testing`, `siem`, `gdpr`, `vulnerability scanning`,
-            `encryption`, `password policies`, `incident handling`, 
-            `compliance frameworks`
+    - Tags: `vpn`, `openvpn`, `nordvpn`, `tor`, `webapps`, `burpsuite`
+
 - [Hardware and Devices][c-hw]
     - Subcategories: 
       - [Display and Graphics][c-hw-dng]
       - [Keyboard][c-hw-key]
       - [Mouse][c-hw-mouse]
       - [UPS Systems and Power Management][c-hw-ups]
-    - Tags:
+    - Tags: `displaylink`, `usb`, `keyboard`, `mouse`, `ups`
+
 - [Network and Systems Administration][c-nsa]
   - Involves managing and maintaining computer networks, servers, and
   infrastructure, including tasks like network setup, troubleshooting, security
@@ -64,8 +63,9 @@ root directory. But to each their own!
         - [Virt-Manager][c-nsa-v-vm]
         - [VirtualBox][c-nsa-v-vb]
         - *#TODO:* Proxmox &/or pfSense
-    - Tags: `troubleshooting`, `network monitoring`, `server configuration`,
-            `system hardening`, `patch management`, `proxmox`
+    - Tags: `android`, bluetooth`, `captive portal`, `gpyc`, `gwapt`, 
+            `kioptrix`, `sans`, `utm`, `virt-manager`, `virtualbox`, `vmware`
+
 - [Operating Systems][c-os]
     - Subcategories: 
       - [Arch Linux][c-os-arch]
@@ -80,32 +80,38 @@ root directory. But to each their own!
       - [Shell and Command-Line][c-os-cli]
       - [Windows][c-os-win]
         - [WSL][c-os-win-wsl]
-    - Tags: `os`, `arch`, `kali`, `windows`, `macos`, `displaylink`, `os
-    installation guide`
+    - Tags: `bootloader`, `chinese`, `dd`, `discover`, `ext4`, `ime`, `iso`, 
+            `os install`, `ramdisk`, `snap`, `xrandr`, `vmlinux`
+
 - [Peripherals and Devices][c-pd]
     - Subcategories: 
-    - Tags: `printers`, 
-- [Software and Applications][c-sa]
-    - Subcategories: 
-    - Tags: 
+      - [Printers][c-pd-printers]
+    - Tags: `printers`, `brother`
+
 - [Software Development][c-sd]
   - This includes areas such as application development, web development,
   mobile app development, software engineering, and programming.
     - Subcategories: 
-      - programming languages
-      - frameworks and libraries
-      - design patterns
-      - testing and debugging
-      - version control systems 
-    - Tags: `java`, `python`, `javascript`, `react`, `git`, `lua`, `ruby`,
-            `code examples`, `best practices`, `performance optimiztion`, 
-            `code review`, ides` `nvim`, `tmux`
+      - [Text Editors][c-sd-tedits]
+      - [Version Control Systems (VCS)][c-sd-vcs]
+    - Tags: `vim`, `git`
+
+- [Software and Applications][c-sa]
+    - Subcategories: 
+      - [Command-Line Ultities][c-sa-cli]
+      - [System Tools][c-sa-st]
+    - Tags: `autojump`, `bitwarden-cli`, ventoy`
+
 - [Troubleshooting][c-ts]
     - Subcategories: 
-    - Tags: 
+    - Tags: `troubleshooting methods`, `methodology`
+
 - [Web Browsers and Extensions][c-wbe]
     - Subcategories: 
-    - Tags: 
+      - [Elinks][c-wbe-elinks]
+      - [Firefox][c-wbe-firefox]
+      - [Links2][c-wbe-links2]
+    - Tags: `bitwarden`, `elinks`, firefox`, `links2`
 
 ### Command Line Interface
 
@@ -190,13 +196,21 @@ documents are guaranteed to work. "Here's looking at you, kid."
 [c-os-fs_dm]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/File%20Systems%20and%20Disk%20Management
 [c-os-grub]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/GRUB%20(Grand%20Unified%20Bootloader)
 [c-os-kali]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Kali
-[c-os-rpi]: null
+[c-os-rpi]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Raspberry%20Pi
 [c-os-local]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Localization%20and%20Internationalization/Language%20Input%20Methods
 [c-os-local-lang_input]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Localization%20and%20Internationalization/Language%20Input%20Methods
 [c-os-pkgmgr]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Package%20Managers/Linux
 [c-os-cli]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Shell%20and%20Command-Line
 [c-os-win]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows
 [c-os-win-wsl]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows/WSL
+[c-pd-printers-bro]: https://github.com/dboyd42/it-support/tree/master/Peripherals%20and%20Devices/Printers/Brother
+[c-sd-tedits]: https://github.com/dboyd42/it-support/tree/master/Software%20Development/Text%20Editors/Vim
+[c-sd-vcs]: https://github.com/dboyd42/it-support/tree/master/Software%20Development/VCS%20(Version%20Control%20Systems)/Git/git
+[c-sa-cli]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications/Command-Line%20Utilities
+[c-sa-st]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications/System%20Tools/Bootable%20Media%20Creation/Ventoy
+[c-wbe-elinks]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Elinks
+[c-wbe-firefox]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Firefox
+[c-wbe-links2]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Links2
 
 [mdp]: https://github.com/iamcco/markdown-preview.nvim
 [dotties]: https://github.com/dboyd42/dotfiles/tree/master/home/.config/nvim
