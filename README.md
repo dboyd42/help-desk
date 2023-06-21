@@ -7,6 +7,7 @@
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
+  - [The KBS Structure Explained](#the-kbs-structure-explained)
   - [Command Line Interface](#command-line-interface)
     - [Example 1: Perform a basic operation](#example-1-perform-a-basic-operation)
     - [Example 2: Configure advanced settings](#example-2-configure-advanced-settings)
@@ -24,6 +25,87 @@ progress to update all RST files to MD.
 
 The fastest method to search for an issue would be to use `grep -ri` from the
 root directory. But to each their own!
+
+### The KBS Structure Explained
+
+- [Cloud Computing][c-cc]
+  - Subcategories:
+    - [OneDrive][c-cc-onedrive]
+  - Tags: `cloud migration`, `onedrive`, `scalability`, `cost optimization`,
+          `service-level agreements (SLAs)`, `cloud governance`, `aws`
+- [Cybersecurity][c-cs]
+  - Deals with protecting computer systems, networks, and data from
+  unauthorized access, breaches, and other security threats. It includes areas
+  like network security, ethical hacking, incident response (IR), and security
+  audits.
+    - Subcategories: 
+      - [Network Security][c-cs-ns]
+      - [Web Application Security][c-cs-was]
+    - Tags: `firewall`, `intrusion detection system (ids)`, `owasp top 10`,
+            `penetration testing`, `siem`, `gdpr`, `vulnerability scanning`,
+            `encryption`, `password policies`, `incident handling`, 
+            `compliance frameworks`
+- [Hardware and Devices][c-hw]
+    - Subcategories: 
+      - [Display and Graphics][c-hw-dng]
+      - [Keyboard][c-hw-key]
+      - [Mouse][c-hw-mouse]
+      - [UPS Systems and Power Management][c-hw-ups]
+    - Tags:
+- [Network and Systems Administration][c-nsa]
+  - Involves managing and maintaining computer networks, servers, and
+  infrastructure, including tasks like network setup, troubleshooting, security
+  management, and system configuraton.
+    - Subcategories: 
+      - [Bluetooth][c-nsa-bt]
+      - [Network Connectivity][c-nsa-nc]
+      - [Virtualiztion][c-nsa-v]
+        - [UTM][c-nsa-v-utm]
+        - [Virt-Manager][c-nsa-v-vm]
+        - [VirtualBox][c-nsa-v-vb]
+        - *#TODO:* Proxmox &/or pfSense
+    - Tags: `troubleshooting`, `network monitoring`, `server configuration`,
+            `system hardening`, `patch management`, `proxmox`
+- [Operating Systems][c-os]
+    - Subcategories: 
+      - [Arch Linux][c-os-arch]
+      - [Asahi Linux][c-os-asahi]
+      - [File Systems and Disk Management][c-os-fs_dm]
+      - [GRUB][c-os-grub]
+      - [Kali][c-os-kali]
+      - [Raspberry Pi][c-os-rpi]
+      - [Localization and Internationalization][c-os-local]
+        - [Language Input Methods][c-os-local-lang_input]
+      - [Package Managers][c-os-pkgmgr]
+      - [Shell and Command-Line][c-os-cli]
+      - [Windows][c-os-win]
+        - [WSL][c-os-win-wsl]
+    - Tags: `os`, `arch`, `kali`, `windows`, `macos`, `displaylink`, `os
+    installation guide`
+- [Peripherals and Devices][c-pd]
+    - Subcategories: 
+    - Tags: `printers`, 
+- [Software and Applications][c-sa]
+    - Subcategories: 
+    - Tags: 
+- [Software Development][c-sd]
+  - This includes areas such as application development, web development,
+  mobile app development, software engineering, and programming.
+    - Subcategories: 
+      - programming languages
+      - frameworks and libraries
+      - design patterns
+      - testing and debugging
+      - version control systems 
+    - Tags: `java`, `python`, `javascript`, `react`, `git`, `lua`, `ruby`,
+            `code examples`, `best practices`, `performance optimiztion`, 
+            `code review`, ides` `nvim`, `tmux`
+- [Troubleshooting][c-ts]
+    - Subcategories: 
+    - Tags: 
+- [Web Browsers and Extensions][c-wbe]
+    - Subcategories: 
+    - Tags: 
 
 ### Command Line Interface
 
@@ -60,7 +142,7 @@ and `-iname` for `i`nsensitive case searching.
 ##### Method 1: GitHub
 
 As these files are public, you can navigate to the desired file and have GitHub
-render markdown file from there.
+render the markdown file from there.
 
 ##### Method 2: NeoVim Plugin - MardownPreview
 
@@ -80,6 +162,43 @@ documents are guaranteed to work. "Here's looking at you, kid."
 
 <!-- Reference Links -->
 
+[c-cc]: https://github.com/dboyd42/it-support/tree/master/Cloud%20Computing
+[c-cc-onedrive]: https://github.com/dboyd42/it-support/tree/master/Cloud%20Computing/OneDrive
+[c-cs]: https://github.com/dboyd42/it-support/tree/master/Cybersecurity
+[c-cs-ns]: https://github.com/dboyd42/it-support/tree/master/Cybersecurity/Network%20Security/VPN%20Services
+[c-cs-was]: https://github.com/dboyd42/it-support/tree/master/Cybersecurity/Web%20Application%20Security/BurpSuite
+[c-hw]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices
+[c-hw-dng]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Display%20and%20Graphics/DisplayLink
+[c-hw-key]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Keyboard
+[c-hw-mouse]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Mouse/Remapping%20SW
+[c-hw-ups]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/UPS%20Systems%20and%20Power%20Management/CyberPower
+[c-nsa]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration
+[c-os]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems
+[c-pd]: https://github.com/dboyd42/it-support/tree/master/Peripherals%20and%20Devices/Printers/Brother
+[c-sd]: https://github.com/dboyd42/it-support/tree/master/Software%20Development
+[c-sa]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications
+[c-ts]: https://github.com/dboyd42/it-support/tree/master/Troubleshooting
+[c-wbe]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions
+[c-nsa-bt]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Bluetooth
+[c-nsa-nc]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Network%20Connectivity
+[c-nsa-v]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization
+[c-nsa-v-utm]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/UTM
+[c-nsa-v-vm]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/Virt-Manager
+[c-nsa-v-vb]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/VirtualBox
+[c-os-arch]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Arch%20Linux
+[c-os-asahi]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Asahi%20Linux%20(M1)
+[c-os-fs_dm]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/File%20Systems%20and%20Disk%20Management
+[c-os-grub]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/GRUB%20(Grand%20Unified%20Bootloader)
+[c-os-kali]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Kali
+[c-os-rpi]: null
+[c-os-local]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Localization%20and%20Internationalization/Language%20Input%20Methods
+[c-os-local-lang_input]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Localization%20and%20Internationalization/Language%20Input%20Methods
+[c-os-pkgmgr]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Package%20Managers/Linux
+[c-os-cli]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Shell%20and%20Command-Line
+[c-os-win]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows
+[c-os-win-wsl]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows/WSL
+
 [mdp]: https://github.com/iamcco/markdown-preview.nvim
 [dotties]: https://github.com/dboyd42/dotfiles/tree/master/home/.config/nvim
 [mac-nvim]: https://github.com/dboyd42/dotfiles/blob/master/macos-setup.md
+
