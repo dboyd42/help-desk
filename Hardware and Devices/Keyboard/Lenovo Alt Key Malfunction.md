@@ -99,7 +99,7 @@ Reset and switch keyboard layout in KDE's Settings:
 
 ## Preventive Measures
 
-1. Don't drop laptop.
+1. Don't drop laptop from the second floor.
 2. Be weary of updates/upgrades and their affects on 3rd party services and
    programs, and desktop environment settings.
 
