@@ -1,26 +1,30 @@
-# VPN Blocks
+# Public WiFi Blocks VPN 
 
-## Issue 01
+**Author: David Boyd**<br>
+**Updated:** 2023-06-24
 
-- Public library WiFi allows you to connect to a NordVPN server, but no data
-will be received.
+## VPN connects to their server, but no data is received
 
-### Solution
+### Solution 1
 
-Use a portable router and UPDATE the firmware.
+Use a **portable router** and *UPDATE* the **firmware**.
 
-#### #### [ Captive Portal ]
+:warning: This doesn't always work.
 
-1. Internet > Repeater > (SSID) > Join
-2. Disconnect from all other settings: VPN, AdBlocks, etc
-3. Admin Panel > MORE SETTINGS > Custom DNS Server > (disable) DNS Rebinding
-   Attack Protection && Apply
+#### 1.1 Connecting to a Captive Portal via the GL-iNet portable router
 
-#### [ Upgrade Firmware ]
+1. Disconnect from all other settings: VPN, AdBlocks, etc
+1. `Internet` > `Repeater` > (SSID) > `Join`
+1. `Admin Panel` > `MORE SETTINGS` > `Custom DNS Server` > *disable* `DNS 
+   Rebinding Attack Protection` > `Apply`
 
-1. UPGRADE > Upgrade
+#### 1.2 Upgrade the Firmware on the GL-iNet portable router
 
-#### [ VPN ]
+1. `UPGRADE` > `Upgrade`
 
-1. VPN > OpenVPN Client > Connect
+#### 1.3 Connect to the VPN
+
+:bulb: This assumes your VPN has already been configured on the router.
+
+1. `VPN` > `OpenVPN Client` > `Connect`
 
