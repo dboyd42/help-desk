@@ -1,7 +1,13 @@
-# OpenVPN
+# How to Remove Profiles in OpenVPN
 
-## Remove Profiles
+**Author:** David Boyd<br>
+**Updated:** 2023-06-24
 
-	# Windows // PowerShell
-	Remove-Item -Recurse -Force %USER%\OpenVPN\config\<profile>
+## Windows
+
+### PowerShell
+
+``` PowerShell
+Remove-Item -Recurse -Force %USER%\OpenVPN\config\<profile>
+```
 
