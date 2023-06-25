@@ -1,160 +1,169 @@
-####################
-Overview of Sections
-####################
+# BurpSuite Glossary
 
-Proxy
-	- What allows us to funnel traffic through Burp Suite for further analysis
+**Author:** David Boyd<br>
+**Date:** 2023-06-24
 
-Target
-	- How we set the scope of our project. We can also use this to effectively
-	  create a site map of the application we are testing.
+## Sections Overview
 
-Intruder
-	- Incredibly powerful tool for everything from field fuzzing to credential
-	  stuffing and more
+**Proxy:** What allows us to funnel traffic through Burp Suite for further
+analysis.
 
-Repeater
-	- Allows us to 'repeat' requests that have previously been made with or
-	  without modification. Often used in a precursor step to fuzzing with
-	  the aforementioned Intruder
+**Target:** How we set the scope of our project. We can also use this to
+effectively create a site map of the application we are testing.
 
-Sequencer
-	- Analyzes the 'randomness' present in parts of the web app which are
-	  intended to be unpredictable. This is commonly used for testing session
-	  cookies
+**Intruder:** Incredibly powerful tool for everything from field fuzzing to
+credential stuffing and more.
 
-Decoder
-	- As the name suggests, Decoder is a tool that allows us to perform
-	  various transforms on pieces of data. These transforms vary from
-	  decoding/encoding to various bases or URL encoding.
+**Repeater:** Allows us to 'repeat' requests that have previously been made
+with or without modification. Often used in a precursor step to fuzzing with
+the aforementioned **Intruder**.
 
-Comparer
-	- Comparer as you might have guessed is a tool we can use to compare
-	  different responses or other pieces of data such as site maps or proxy
-	  histories (awesome for access control issue testing). This is very
-	  similar to the Linux tool diff.
+**Sequencer:** Analyzes the 'randomness' present in parts of the web app
+which are intended to be unpredictable. This is commonly used for testing
+session cookies.
 
-Extender
-	- Similar to adding mods to a game like Minecraft, Extender allows us to
-	  add components such as tool integrations, additional scan definitions,
-	  and more!
+**Decoder:** As the name suggests, Decoder is a tool that allows us to
+perform various transforms on pieces of data. These transforms vary from
+decoding/encoding to various bases or URL encoding.
 
-Scanner
-	- Automated web vulnerability scanner that can highlight areas of the
-	  application for further manual investigation or possible exploitation
-	  with another section of Burp. This feature, while not in the community
-	  edition of Burp Suite, is still a key facet of performing a web
-	  application test.
+**Comparer:** Comparer as you might have guessed is a tool we can use to
+compare different responses or other pieces of data such as site maps or proxy
+histories (awesome for access control issue testing). This is very similar to
+the Linux tool diff.
 
-########
-Repeater
-########
+**Extender:** Similar to adding mods to a game like Minecraft, Extender allows
+us to add components such as tool integrations, additional scan definitions,
+and more!
 
-Repeater
-	- used for automation
-	- used for many things ranging from fuzzing to brute-forcing
-	- handles experimentation or one-off testing,
-	- meant for repeat testing once a proof of concept has been established.
+**Scanner:** Automated web vulnerability scanner that can highlight areas of
+the application for further manual investigation or possible exploitation with
+another section of Burp. This feature, while not in the community edition of
+Burp Suite, is still a key facet of performing a web application test.
 
------------
-common uses
------------
+## Repeater
 
-	- Enumerating identifiers
-		- usernames,
-		- cycling through predictable session/password recovery tokens,
-		- attempting simple password guessing
-	- Harvesting useful data from
-		- user profiles or other pages of interest
-			[+] via grepping our responses
-	- Fuzzing for vulnerabilities
-		- SQL injection,
-		- cross-site scripting (XSS), and
-		- file path traversal
+**Purpose:** Meant for repeat testing once a proof of concept has been established.
 
-============
-Attack Types
-============
+**Uses:** Automation, fuzzing, brute-forcing, handles experimentation or
+one-off testing.
 
-1. Sniper
-	- most popular attack type,
-	- cycles through our selected positions,
-		[+] putting the next available payload (item from our wordlist)
-			in each position in turn.
-			This uses only one set of payloads (one wordlist).
+### Common Uses
 
-2. Battering Ram
-	- uses only one set of payloads. (Similar to Sniper)
-	- puts every payload into every selected position. (Unlike Sniper)
-	[+] Think about how a battering ram makes contact across a large surface
-		with a single surface,
-		hence the name battering ram for this attack type.
+- *Enumerating* **identifiers:**
+  - usernames, cycling through predictable session/password recovery tokens,
+    attempting simple password guessing.
+- *Harvesting* useful **data** from:
+  - user profiles, pages of interest *(via grepping our responses)*.
+- *Fuzzing* for **vulnerabilities:**
+  - SQL injection, cross-site scripting (XSS), and file path traversal.
 
-3. Pitchfork
-	- allows us to use multiple payload sets (one per position selected)
-	- and iterate through both payload sets simultaneously.
-	[+] For example,
-		if (we selected two positions
-			(say a username field and a password field)) {
-					we can provide a username and password payload list;
-			# Intruder will then cycle through the combinations of usernames
-			#	and passwords,
-			# resulting in a total number of combinations equalling the
-			#	smallest payload set provided.
-		}
+## Attack Types
 
-4. Cluster Bomb
-	- allows us to use multiple payload sets (one per position selected)
-	- and iterate through all combinations of the payload lists we provide.
-	[+] For example,
-		if (we selected two positions
-			(say a username field and a password field)) {
-				we can provide a username and password payload list;
-			# Intruder will then cycle through the combinations of usernames
-			#	and passwords,
-			# resulting in a total number of combinations equalling usernames
-			#	x passwords.
-			// Do note, this can get pretty lengthy if you are using the //
-			// community edition of Burp.								 //
-		}
+### Sniper
 
-###########
-Other Terms
-###########
+Sniper is the most popular attack type.
 
-payload
-	- an item from our wordlist
+Sniper cycles through our selected positions, by putting the next available
+payload (item from our wordlist) in each position in turn.
 
-set of payloads
-	- a wordlist
+:warning: This uses only *one set* of payloads (one wordlist).
 
-#########
-Sequencer
-#########
-:NOTE: 'Set-Cookie' response needs to be 'MIME type': 'JSON' (HTTP history col)
+:bulb: Think of one shot per target. Hence the name, *Sniper*.
 
-Sequencer
-	- a tool
-	- that analyzes the "quality" of randomness
-	- in an application's **sessions tokens**
-	- & other such data that is otherwise *expected* to be *unpredictable*.
+### Battering Ram
 
------------
-common uses
------------
+Battering Ram puts every payload into every selected position *(unlike
+Sniper)*.
 
-	- Sessions tokens
-	- Anti-CSRF tokens
-	- Password reset tokens
-		(sent w/ password resets that,
-		 in theory,
-		 uniquely tie users with their password reset requests).
+:warning: Uses only *one set* of payloads *(similar to Sniper)*.
 
+:bulb: Think about how a battering ram makes contact across a large surface
+area with a single object. Hence the name, *Battering Ram*.
 
+### Pitchfork
 
-###################
-Decoder && Comparer
-###################
+Pitchfork allows us to use *multiple payload sets*, where one set is positioned
+on a target paramter, then iterates through both payload sets simultaneously
+*(in parallel)*.
+
+:gun::gun: Think of a dual pistol wielding badass but with forks
+:fork_and_knife:
+
+#### Example
+
+**Setup**
+
+| Position (@Param) | Payload Set       |
+|-------------------|-------------------|
+| `username`        | username_wordlist |
+| `password`        | password_wordlist |
+
+**Result**
+
+| Request | Value                                                            |
+|---------|------------------------------------------------------------------|
+| 1       | `username`=username_wordlist[0], `password`=password_wordlist[0] |
+| 2       | `username`=username_wordlist[1], `password`=password_wordlist[1] |
+| 3       | `username`=username_wordlist[2], `password`=password_wordlist[2] |
+| 4       | `username`=username_wordlist[3], `password`=password_wordlist[3] |
+
+:bulb: Resulting total number of combinations will equal the smallest payload
+set provided.
+
+### Cluster Bomb
+
+Cluster Bomb allows us to use multiple payload sets *(one per position
+selected)* and iterate through ***all combinations*** of the payload lists
+provided.
+
+:boom: Think of how a grenade propels shrapnel in every which directional
+combination possible :boom:
+
+#### Example
+
+**Setup**
+
+| Position (@Param) | Payload Set |
+|-------------------|-------------|
+| `username`        | a_wordlist  |
+| `password`        | a_wordlist  |
+
+**Result**
+
+| Request | Value                                              |
+|---------|----------------------------------------------------|
+| 1       | `username`=a_wordlist[0], `password`=a_wordlist[0] |
+| 2       | `username`=a_wordlist[0], `password`=a_wordlist[1] |
+| 3       | `username`=a_wordlist[0], `password`=a_wordlist[2] |
+| 4       | `username`=a_wordlist[0], `password`=a_wordlist[3] |
+
+:bulb: Resulting total number of combinations will equal the `n(positions) *
+len(wordlist)`
+
+## Other Terms
+
+**Payload:** an item *(or word)* from our wordlist.
+
+**Set of payloads:** a wordlist.
+
+## Sequencer
+
+:pencil: `Set-Cookie` **response** needs to be `MIME type`: `JSON` (HTTP
+history col)
+
+Sequencer is a tool that analyzes the **quality of randomness** in an
+application's **sessions tokens** and similar data that is otherwise expected
+to be unpredictable.
+
+### Common Uses
+
+- Sessions tokens
+- Anti-CSRF tokens
+- Password reset tokens
+  - **Password reset tokens:** are tokens that are sent w/ password resets 
+    that, in theory, uniquely tie users with their password reset requests.
+
+### Decoder && Comparer
 
 Decoder
 	- is a tool
@@ -324,6 +333,4 @@ Usage
 -----
 :Method1: Dashboard > (+)New live task
 :Method2: Rt-click > Scan
-
-
 
