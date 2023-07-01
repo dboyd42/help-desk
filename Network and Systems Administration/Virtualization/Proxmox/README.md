@@ -72,8 +72,9 @@ or subheadings if necessary.]*
 :bulb: When attaching the disk, append the `.raw` extension 
 
 ``` bash
-# Attach the disk
+# Attach the disk (examples of locations and syntax)
 qm set 106 --scsi0 local-btrfs:106/vm-106-disk-0.raw
+qm set 7001 --ide0 local-btrfs:7001/vm-7001-disk-0.raw
 ```
 
 ### Step 4: Vulnerable VMs
