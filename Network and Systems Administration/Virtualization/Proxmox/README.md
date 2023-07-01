@@ -36,8 +36,31 @@ following the guide.]*
 
 ### Step 1: Proxmox
 
-*[Provide a clear and concise explanation of the first step. Use bullet points
-or subheadings if necessary.]*
+#### Post-Installation
+
+##### 1. Remove Subscription Message
+
+``` bash
+# 1. Create a backup config of proxmoxlib.js
+cp /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js \
+/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak
+
+# 2. Edit the following function
+vim /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js 
+
+  ## Search for:
+  Ext.Msg.show({
+    title: gettext('No valid subscription'),
+
+  ## Replace with:
+  void({
+    title: gettext('No valid subscription'),
+
+# 4. Restart the PVE Proxy service
+systemctl restart pveproxy.service
+```
+
+##### 2. Setup Online Access via Cloudflare Tunneling
 
 ### Step 2: pfSense
 
