@@ -69,8 +69,12 @@ or subheadings if necessary.]*
 
 ### Step 3: Kali
 
-*[Provide a clear and concise explanation of the first step. Use bullet points
-or subheadings if necessary.]*
+:bulb: When attaching the disk, append the `.raw` extension 
+
+``` bash
+# Attach the disk
+qm set 106 --scsi0 local-btrfs:106/vm-106-disk-0.raw
+```
 
 ### Step 4: Vulnerable VMs
 
