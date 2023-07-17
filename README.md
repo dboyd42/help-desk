@@ -1,7 +1,7 @@
 # IT Support / KBS
 
 **Author:** David Boyd<br>
-**Updated:** 2023-06-21
+**Updated:** 2023-07-17 
 
 ## Table of Contents
 
@@ -9,9 +9,9 @@
 - [Getting Started](#getting-started)
   - [The KBS Structure Explained](#the-kbs-structure-explained)
   - [Command Line Interface](#command-line-interface)
-    - [Example 1: Perform a basic operation](#example-1-perform-a-basic-operation)
-    - [Example 2: Configure advanced settings](#example-2-configure-advanced-settings)
-    - [Example 3: Render MD file](#exmaple-3-render-md-file)
+    - [Example 1: Perform a basic search](#example-1-perform-a-basic-search)
+    - [Example 2: Perform a filename search](#example-1-perform-a-filename-search)
+    - [Example 3: Render an MD file](#example-3-render-an-md-file)
 - [Troubleshooting](#troubleshooting)
 
 ## Introduction
@@ -119,8 +119,9 @@ root directory. But to each their own!
 
 - [Example 1: Perform a basic search](#example-1-perform-a-basic-search)
 - [Example 2: Perform a filename search](#example-1-perform-a-filename-search)
-- [Example 3: Render MD file](#exmaple-3-render-md-file)
+- [Example 3: Render an MD file](#example-3-render-an-md-file)
 
+<a id="example-1-perform-a-basic-search"></a>
 #### Example 1: Perform a basic search
 
 ``` bash
@@ -132,6 +133,7 @@ grep -ri $PATTERN
 Using `r` to search `r`ecursively through the repo and `i` to search regardless
 of upper/lowercase.
 
+<a id="example-1-perform-a-filename-search"></a>
 #### Example 2: Perform a filename search
 
 ``` bash
@@ -143,7 +145,8 @@ find ./ -type f -iname $PATTERN
 Use the `*` to implement a wildcard search with flags `-type f` for filenames
 and `-iname` for `i`nsensitive case searching.
 
-#### Example 3: Render MD file
+<a id="example-3-render-an-md-file"></a>
+#### Example 3: Render an MD file
 
 ##### Method 1: GitHub
 
