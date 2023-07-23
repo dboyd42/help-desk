@@ -9,9 +9,9 @@
 - [Objective](#objective)
 - [Prerequisites](#prerequisites)
 - [Steps](#steps)
-  - [Step 1: Router Setup](#step:-1-router-setup)
+  - [Step 1: Router Setup](#step-1-router-setup)
   - [Step 2: Kali Linux Setup](#step-2-kali-linux-setup)
-  - [Step 3: macOS Setup](#step-3:-macos-setup)
+  - [Step 3: macOS Setup](#step-3-macos-setup)
   - [Step 4: Let the Magic Begin...](#step-4-let-the-magic-begin)
 - [Tips and Best Practices](#tips-and-best-practices)
 
