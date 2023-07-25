@@ -7,11 +7,10 @@
 
 - [Introduction](#introduction)
 - [Objective](#objective)
-- [Prerequisites](#prerequisites)
 - [Steps](#steps)
-  - [Step 1: Download a downgraded Firefox](#step-1:-download-a-downgraded-firefox)
-  - [Step 2: Install the Downgraded Firefox](#step-2:-install-the-downgraded-firefox)
-  - [Step 3: Login and Stream](#step-3:-login-and-stream)
+  - [Step 1: Download an Outdated Firefox](#step-1-download-an-outdated-firefox)
+  - [Step 2: Install the Outdated Firefox](#step-2-install-the-outdated-firefox)
+  - [Step 3: Login and Stream](#step-3-login-and-stream)
 
 ## Introduction
 
@@ -37,7 +36,7 @@ on an M1 MacBook Pro.
 
 ## Steps
 
-### Step 1: Download a downgraded Firefox
+### Step 1: Download an Outdated Firefox
 
 You can use any Firefox version up to 105.x. 
   - :warning: If using 105.x, disable auto-upgrade by pressing `⌘,` upon 
@@ -47,7 +46,7 @@ You can use any Firefox version up to 105.x.
 I went ahead a tested [Firefox 91.0.1][ff-9101] which can be downloaded from
 the official Mozilla website.
 
-### Step 2: Install the Downgraded Firefox
+### Step 2: Install the Outdated Firefox
 
 :bulb: I use Firefox as my primary browser. But using an outdated version of
 anything is prone to security risks and you'll want to keep that to a minimum.
