@@ -2,6 +2,7 @@
 
 **Author:** David Boyd<br>
 **Date:** 2023-07-24
+> Updated: 2023-07-26
 
 ## Table of Contents
 
@@ -10,7 +11,8 @@
 - [Steps](#steps)
   - [Step 1: Download an Outdated Firefox](#step-1-download-an-outdated-firefox)
   - [Step 2: Install the Outdated Firefox](#step-2-install-the-outdated-firefox)
-  - [Step 3: Login and Stream](#step-3-login-and-stream)
+  - [Step 3: Set No Autoupdate](#step-3-set-no-autoupdate) 
+  - [Step 4: Login and Stream](#step-4-login-and-stream)
 
 ## Introduction
 
@@ -39,9 +41,6 @@ on an M1 MacBook Pro.
 ### Step 1: Download an Outdated Firefox
 
 You can use any Firefox version up to 105.x. 
-  - :warning: If using 105.x, disable auto-upgrade by pressing `⌘,` upon 
-    launch, then deselect `automatic updates` (search `update` for faster
-    results)
 
 I went ahead a tested [Firefox 91.0.1][ff-9101] which can be downloaded from
 the official Mozilla website.
@@ -53,7 +52,54 @@ anything is prone to security risks and you'll want to keep that to a minimum.
 Upon installation, you'll be asked if you'll want to keep `Both` or `Replace`.
 by selecting `Both`, a **Firefox 2** will be created.
 
-### Step 3: Login and Stream
+:warning: Do NOT open the application!!!
+
+### Step 3: Set No Autoupdate 
+
+This is important as I learned the hardway... We need to disable auto update
+and upon initial launch, it will do just that. There are two methods for this
+madness, but the first method is a more permanent means as the second was only
+a temporary solution--this may have also been caused by click on :x: "Create 
+new profile" :x: which I don't recommend doing.
+
+#### Method 1: Create Policies File
+
+```bash
+# 1. Change dir into the downloaded old Firefox.app 
+cd /Applications/Firefox\ 2.app
+
+# 2. Create a distributions directory and create a policies JSON file
+mkdir distributions && cd $_
+vim policies.json
+```
+
+Copy and paste the following into your `policies.json` file:
+
+``` json
+{
+"policies":
+   {
+     "DisableAppUpdate": true
+    }
+}
+```
+
+#### Method 2: Disable Auto Updates in Firefox Settings
+
+1. Disconnect from the internet
+2. Open Firefox > `Settings`
+3. Scroll down or search for `Firefox Updates`
+4. Select `Check for updates but let you choose to install them`
+5. Recconect your internet connection
+
+:warning: This method ultimately does the same as above, but I've come across instances
+where it still auto update upon relaunching the app.
+
+### Step 4: Login and Stream
+
+:warning: You'll have a pesky `New Update... Available Now!` alert each time
+you run the initial Firefox version, but this is a small inconvienance compared
+to having no video displayed while playing DRM content. Aaaaand....
 
 :checkered_flag: That's it! Login into the streaming site and stream your
 videos!
