@@ -29,8 +29,7 @@ enabling remote accessibility to an attack machine from anywhere in the world.
 
 ## Prerequisites
 
-*[List any prerequisites or requirements that readers need to fulfill before
-following the guide.]*
+*#TODO*
 
 ## Steps
 
@@ -62,12 +61,25 @@ systemctl restart pveproxy.service
 
 ##### 2. Setup Online Access via Cloudflare Tunneling
 
+*#TODO*
+
 ### Step 2: pfSense
 
-*[Provide a clear and concise explanation of the first step. Use bullet points
-or subheadings if necessary.]*
+*#TODO*
+
+#### Setup a 'Kali' Host Alias
+
+*#TODO*
+
+| Setting | Value                            |
+|---------|----------------------------------|
+| Name    | Kali                             |
+| IP      | 10.0.0.2                         |
+| MAC     | *Copy from image and paste here* |
 
 ### Step 3: Kali
+
+*#TODO*
 
 :bulb: When attaching the disk, append the `.raw` extension 
 
@@ -79,13 +91,11 @@ qm set 7001 --ide0 local-btrfs:7001/vm-7001-disk-0.raw
 
 ### Step 4: Vulnerable VMs
 
-*[Provide a clear and concise explanation of the first step. Use bullet points
-or subheadings if necessary.]*
+*#TODO*
 
 ### Step 5: Active Directory
 
-*[Provide a clear and concise explanation of the first step. Use bullet points
-or subheadings if necessary.]*
+*#TODO*
 
 ## Tips and Best Practices
 
@@ -95,9 +105,6 @@ or subheadings if necessary.]*
     - :bulb: Learn what each command actually performs :computer:
 
 ## Conclusion
-
-*[Summarize the guide and reiterate the key points. Optionally, suggest next
-steps or provide additional resources for readers to explore.]*
 
 ## Additional Resources
 
