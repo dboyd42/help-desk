@@ -1,4 +1,4 @@
-# Installing Display Link on Arch Linux
+# Installing DisplayLink on Arch Linux
 
 > Author : David Boyd<br>
 > Date   : 2023-04-10<br>
