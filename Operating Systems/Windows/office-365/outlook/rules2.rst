@@ -1,15 +1,11 @@
-Outlook > Add Support@ Rule
+Add Support Rule in Outlook
 ###########################
 
 Create New Rule
 ***************
 
-#. File
-
-	- Make sure first.name@contigo.tx is selected in the uppermost drop-down box
-
+#. File: Make sure first.name@domain.tld is selected in the uppermost drop-down box
 #. On the right hand side, click 'Manage Rules & Alerts'
-
 #. Click 'New Rule...'
 #. Under 'Stay Organized', click 'Move messages sent to a public group to a folder'
 #. Under 'Step 2: Edit the rule description...', click the blue underlined, 'people or public group'
@@ -17,13 +13,11 @@ Create New Rule
 #. Under 'Step 2: Edit the rule description...', click the blue underlined, 'specified'
 #. Under 'Choose a folder:', select your.name@contigotx.com email address
 #. Click 'New...'
-#. Input name of new folder; then click 'OK'
-	- ie) Support
-
+#. Input name of new folder; then click 'OK'  (ie. Support)
 #. Double-check 'Step 2' descriptions
 
-	- Apply this rule after the message arrives sent to Contigo Support move it
-	to the Support folder and stop processing more rules
+Apply this rule after the message arrives sent to Support move it
+to the Support folder and stop processing more rules
 
 #. Click 'Next' > 'Next' (defaults to stop processing more rules)
 #. Click 'Next' > 'Next'
