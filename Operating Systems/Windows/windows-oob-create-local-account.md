@@ -2,6 +2,7 @@
 
 **Author:** David Boyd<br>
 **Date:** 2023-06-08
+>> **Updated:** 2023-08-02
 
 ## Introduction
 
@@ -26,6 +27,8 @@ install.
 ``` cmdprompt
 \> taskmanager
 ```
+
+:bulb: For Windows 11 ARM64, `taskmanager` has been moved to `Taskmgr.exe`
 
 ### Step 3: Kill Network COnnection Flow
 
