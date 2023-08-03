@@ -1,9 +1,0 @@
-Windows 10
-##########
-
-Method #1) Remove folder from syncing
-=====================================
-
-	1. Rt-click icon > More > Settings > Account > Choose folders > Choose folders
-	2. Uncheck desired folder(s)
-
