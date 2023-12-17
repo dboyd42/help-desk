@@ -30,7 +30,7 @@ cd yay && makepkg -si
 
 # 2. Install various shell programs
 pacman -S bat cups fzf cpanminus xclip neovim tmux zsh npm ruby python3 python-pip mlocate firefox qutebrowser virt-manager vivaldi --noconfirm
-yay -S ungoogled-chromium-bin librewolf
+yay -S ungoogled-chromium-bin librewolf brave-bin
 
 ### Installing ZSH Guide: https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 # 3. Verify zsh installation
@@ -147,6 +147,8 @@ sudo cpanm -n Neovim::Ext
 
 ## 4. Neovim Dotfiles
 
+- :warning: This section is outdated. Please refer to my [nvim dotfiles](https://github.com/dboyd42/dotfiles/tree/master/home/.config/nvim).
+
 ### CheckHealth Pass
 
 1. Install dependencies.  Use `:checkhealth` to verify installs & integration:
@@ -166,14 +168,11 @@ sudo cpanm -n Neovim::Ext
 3. Compile, Install, Sync Packer: `vim +PackerCompile`, `:PackerInstall`,
    `:PackerSync`
 
-### COC (Code of Completion)
+## Troubleshooting
 
-**REF:** https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+### OBS Flickering
 
-1. `CocInstall <extensionNames>`
-
-## ?. Other Notes
-
-OBS Flickering: System Settings > Display & Monitor > Compositor >
-[Uncheck] Allow applications to block compositing
+  - RESOLVED
+  - `System Settings` > `Display & Monitor` > `Compositor` > 
+[Uncheck] `Allow applications to block compositing`
 
