@@ -98,10 +98,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 5. Setup Avahi (Network Discovery): https://wiki.archlinux.org/title/Avahi#Hostname_resolution
     - `pacman -S nss-mdns`
     - Install, enable, and start Avahi: 
-      `pacman -S avahi && systemctl enable --now avahi.service`
+      `pacman -S avahi && systemctl enable --now avahi-daemon.service`
     - Edit and change the `hosts` line in the `/etc/nsswitch.conf` file:
     	- `hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns`
-6. Set up Line Print Options:
+6. Install printer (via KDE GUI Settings > Printers):
+    1. Click `Add Printer`
+    2. Click `Manual URI` ***AND/OR*** wait for printer box to populate
+    3. Click **Discovered Network Printers** > `Brother DCP-L2540DW series` 
+    4. Choose **Connections** > `IPP network printer via DNS-SD`
+    5. Choose previously installed driver: `Brother DCP-L2540DW series, using brlaser v6 (en)`
+    6. Continue through remaining self-guided options and test print.
+
+7. Set up Line Print Options:
     1. Check the term's default printer setup: `lpstat -d`
     2. If none appear, list all available printers: `lpstat -p`
     3. Set term's default printer: `lpoptions -d <printerName>`
