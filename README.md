@@ -63,7 +63,7 @@ root directory. But to each their own!
         - [Virt-Manager][c-nsa-v-vm]
         - [VirtualBox][c-nsa-v-vb]
         - *#TODO:* Proxmox &/or pfSense
-    - Tags: `android`, bluetooth`, `captive portal`, `gpyc`, `gwapt`, 
+    - Tags: `android`, `bluetooth`, `captive portal`, `gpyc`, `gwapt`, 
             `kioptrix`, `sans`, `utm`, `virt-manager`, `virtualbox`, `vmware`
 
 - [Operating Systems][c-os]
