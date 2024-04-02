@@ -17,6 +17,7 @@
   * [Software Development](#software-development)
   * [Software and Applications](#software-and-applications)
   * [Web Browsers and Extensions](#web-browsers-and-extensions)
+  * [Troubleshooitng](#troubleshooitng)
 * [Usage](#usage)
   * [Keyword Search via grep](#keyword-search-via-grep)
   * [Filename Search via find](#filename-search-via-find)
@@ -35,15 +36,18 @@ This repo acts as a knowledge-base system (KBS) for various IT issues and their
 ## KBS Overview
 
 ### [Cloud Computing][c-cc]
+
   * [OneDrive][c-cc-onedrive]
 
 ### [Hardware and Devices][c-hw]
+
   * [Display and Graphics][c-hw-dng]
   * [Keyboard][c-hw-key]
   * [Mouse][c-hw-mouse]
   * [UPS Systems and Power Management][c-hw-ups]
 
 ### [Network and Systems Administration][c-nsa]
+
   * [Bluetooth][c-nsa-bt]
   * [Dell PowerEdge R620][c-nsa-dell]
   * [Network Connectivity][c-nsa-nc]
@@ -56,6 +60,7 @@ This repo acts as a knowledge-base system (KBS) for various IT issues and their
     * [VirtualBox][c-nsa-v-vb]
 
 ### [Operating Systems][c-os]
+
   * [Arch Linux][c-os-arch]
   * [Asahi Linux (M1)][c-os-asahi]
   * [File Systems and Disk Management][c-os-fs_dm]
@@ -69,20 +74,28 @@ This repo acts as a knowledge-base system (KBS) for various IT issues and their
   * [WSL][c-os-win-wsl]
 
 ### [Peripherals and Devices][c-pd]
+
   * [Printers][c-pd-printers]
 
 ### [Software Development][c-sd]
+
   * [Text Editors][c-sd-tedits]
   * [Version Control Systems (VCS)][c-sd-vcs]
 
 ### [Software and Applications][c-sa]
+
   * [Command-Line Utilities][c-sa-cli]
   * [System Tools][c-sa-st]
 
 ### [Web Browsers and Extensions][c-wbe]
+
   * [Elinks][c-wbe-elinks]
   * [Firefox][c-wbe-firefox]
   * [Links2][c-wbe-links2]
+
+### [Troubleshooitng][c-ts]
+
+  * [Methodology][c-ts-methodology]
 
 ## Usage
 
@@ -125,57 +138,56 @@ README.md`
 
 ## Troubleshooting
 
-:warning: Not all documents have been verified! 
+[!WARNING] Not all documents have been verified! 
 
 Some of the solutions may have "worked" by a random combination of attempts. 
 So not all documents are guaranteed to work. "Here's looking at you, kid."
 
 <!-- Reference Links -->
 
-<!-- Reference Links -->
-
-[c-cc]: ./tree/master/Cloud%20Computing
-[c-cc-onedrive]: ./tree/master/Cloud%20Computing/OneDrive
-[c-hw]: ./tree/master/Hardware%20and%20Devices
-[c-hw-dng]: ./tree/master/Hardware%20and%20Devices/Display%20and%20Graphics/DisplayLink
-[c-hw-key]: ./tree/master/Hardware%20and%20Devices/Keyboard
-[c-hw-mouse]: ./tree/master/Hardware%20and%20Devices/Mouse/Remapping%20SW
-[c-hw-ups]: ./tree/master/Hardware%20and%20Devices/UPS%20Systems%20and%20Power%20Management/CyberPower
-[c-nsa]: ./tree/master/Network%20and%20Systems%20Administration
-[c-nsa-bt]: ./tree/master/Network%20and%20Systems%20Administration/Bluetooth
-[c-nsa-dell]: ./tree/master/Network%20and%20Systems%20Administration/Dell%20PowerEdge%20R620
-[c-nsa-nc]: ./tree/master/Network%20and%20Systems%20Administration/Network%20Connectivity
-[c-nsa-v]: ./tree/master/Network%20and%20Systems%20Administration/Virtualization
-[c-nsa-v-proxmox]: ./tree/master/Network%20and%20Systems%20Administration/Virtualization/Proxmox
-[c-nsa-v-utm]: ./tree/master/Network%20and%20Systems%20Administration/Virtualization/UTM
-[c-nsa-v-vm]: ./tree/master/Network%20and%20Systems%20Administration/Virtualization/Virt-Manager
-[c-nsa-v-vb]: ./tree/master/Network%20and%20Systems%20Administration/Virtualization/VirtualBox
-[c-nsa-vnc]: ./tree/master/Network%20and%20Systems%20Administration/Remote%20Desktop%20(VNC)
-[c-os]: ./tree/master/Operating%20Systems
-[c-os-arch]: ./tree/master/Operating%20Systems/Arch%20Linux
-[c-os-asahi]: ./tree/master/Operating%20Systems/Asahi%20Linux%20(M1)
-[c-os-fs_dm]: ./tree/master/Operating%20Systems/File%20Systems%20and%20Disk%20Management
-[c-os-grub]: ./tree/master/Operating%20Systems/GRUB%20(Grand%20Unified%20Bootloader)
-[c-os-kali]: ./tree/master/Operating%20Systems/Kali
-[c-os-local]: ./tree/master/Operating%20Systems/Localization%20and%20Internationalization
-[c-os-pkgmgr]: ./tree/master/Operating%20Systems/Package%20Managers/Linux
-[c-os-rpi]: ./tree/master/Operating%20Systems/Raspberry%20Pi
-[c-os-cli]: ./tree/master/Operating%20Systems/Shell%20and%20Command-Line
-[c-os-win]: ./tree/master/Operating%20Systems/Windows
-[c-os-win-wsl]: ./tree/master/Operating%20Systems/Windows/WSL
-[c-pd]: ./tree/master/Peripherals%20and%20Devices
-[c-pd-printers]: ./tree/master/Peripherals%20and%20Devices/Printers
-[c-sd]: ./tree/master/Software%20Development
-[c-sd-tedits]: ./tree/master/Software%20Development/Text%20Editors/Vim
-[c-sd-vcs]: ./tree/master/Software%20Development/VCS%20(Version%20Control%20Systems)/Git
-[c-sa]: ./tree/master/Software%20and%20Applications
-[c-sa-cli]: ./tree/master/Software%20and%20Applications/Command-Line%20Utilities
-[c-sa-st]: ./tree/master/Software%20and%20Applications/System%20Tools
-[c-ts]: ./tree/master/Troubleshooting
-[c-wbe]: ./tree/master/Web%20Browsers%20and%20Extensions
-[c-wbe-elinks]: ./tree/master/Web%20Browsers%20and%20Extensions/Elinks
-[c-wbe-firefox]: ./tree/master/Web%20Browsers%20and%20Extensions/Firefox
-[c-wbe-links2]: ./tree/master/Web%20Browsers%20and%20Extensions/Links2
+[c-cc]: https://github.com/dboyd42/it-support/tree/master/Cloud%20Computing/OneDrive
+[c-cc-onedrive]: https://github.com/dboyd42/it-support/tree/master/Cloud%20Computing/OneDrive
+[c-hw]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices
+[c-hw-dng]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Display%20and%20Graphics/DisplayLink
+[c-hw-key]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Keyboard
+[c-hw-mouse]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/Mouse/Remapping%20SW
+[c-hw-ups]: https://github.com/dboyd42/it-support/tree/master/Hardware%20and%20Devices/UPS%20Systems%20and%20Power%20Management/CyberPower
+[c-nsa]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration
+[c-nsa-bt]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Bluetooth
+[c-nsa-dell]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Dell%20PowerEdge%20R620
+[c-nsa-nc]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Network%20Connectivity
+[c-nsa-v]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization
+[c-nsa-v-proxmox]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/Proxmox
+[c-nsa-v-utm]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/UTM
+[c-nsa-v-vm]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/Virt-Manager
+[c-nsa-v-vb]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Virtualization/VirtualBox
+[c-nsa-vnc]: https://github.com/dboyd42/it-support/tree/master/Network%20and%20Systems%20Administration/Remote%20Desktop%20(VNC)
+[c-os]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems
+[c-os-arch]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Arch%20Linux
+[c-os-asahi]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Asahi%20Linux%20(M1)
+[c-os-fs_dm]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/File%20Systems%20and%20Disk%20Management
+[c-os-grub]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/GRUB%20(Grand%20Unified%20Bootloader)
+[c-os-kali]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Kali
+[c-os-local]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Localization%20and%20Internationalization/Language%20Input%20Methods
+[c-os-pkgmgr]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Package%20Managers/Linux
+[c-os-rpi]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Raspberry%20Pi
+[c-os-cli]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Shell%20and%20Command-Line
+[c-os-win]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows
+[c-os-win-wsl]: https://github.com/dboyd42/it-support/tree/master/Operating%20Systems/Windows/WSL
+[c-pd]: https://github.com/dboyd42/it-support/tree/master/Peripherals%20and%20Devices/Printers/Brother
+[c-pd-printers]: https://github.com/dboyd42/it-support/blob/master/Peripherals%20and%20Devices/Printers/Brother/How%20to%20Bypass%20Toner%20Warning%20on%20a%20Brother%20DCP-L2540DW%20Printer.md
+[c-sd]: https://github.com/dboyd42/it-support/tree/master/Software%20Development
+[c-sd-tedits]: https://github.com/dboyd42/it-support/tree/master/Software%20Development/Text%20Editors/Vim
+[c-sd-vcs]: https://github.com/dboyd42/it-support/tree/master/Software%20Development
+[c-sa]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications
+[c-sa-cli]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications/Command-Line%20Utilities
+[c-sa-st]: https://github.com/dboyd42/it-support/tree/master/Software%20and%20Applications/System%20Tools/Bootable%20Media%20Creation/Ventoy
+[c-ts]: https://github.com/dboyd42/it-support/tree/master/Troubleshooting
+[c-ts-methodology]: https://github.com/dboyd42/it-support/blob/master/Troubleshooting/Troubleshooting%20Methods.md
+[c-wbe]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions
+[c-wbe-elinks]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Elinks
+[c-wbe-firefox]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Firefox
+[c-wbe-links2]: https://github.com/dboyd42/it-support/tree/master/Web%20Browsers%20and%20Extensions/Links2
 [mdp]: https://github.com/iamcco/markdown-preview.nvim
 [dotties]: https://github.com/dephraiim/dotfiles
 [mac-nvim]: https://github.com/dephraiim/dotfiles/blob/main/nvim/vimrc
