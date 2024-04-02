@@ -8,7 +8,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Introduction](#introduction)
-* [Overview](#overview)
+* [KBS Overview](#kbs-overview)
   * [Cloud Computing](#cloud-computing)
   * [Hardware and Devices](#hardware-and-devices)
   * [Network and Systems Administration](#network-and-systems-administration)
@@ -21,20 +21,18 @@
   * [Keyword Search via grep](#keyword-search-via-grep)
   * [Filename Search via find](#filename-search-via-find)
   * [Render an MD file](#render-an-md-file)
-    * [Method 1: GitHub](#method-1-github)
-    * [Method 2: NeoVim Plugin - Mardown Preview](#method-2-neovim-plugin---mardown-preview)
-      * [Open the markdown file in vim and run the plugin:](#open-the-markdown-file-in-vim-and-run-the-plugin)
-  * [Troubleshooting](#troubleshooting)
+    * [Method 1: via GitHub](#method-1-via-github)
+    * [Method 2: via NeoVim Plugin - Mardown Preview](#method-2-via-neovim-plugin---mardown-preview)
+* [Troubleshooting](#troubleshooting)
 
 <!-- vim-markdown-toc -->
 
 ## Introduction
 
 This repo acts as a knowledge-base system (KBS) for various IT issues and their
-*hopeful* solutions that I have worked tirelessly through. The repo has been
-updated to fit a more IT KBS structure. 
+*hopeful* solutions that I have worked tirelessly through.
 
-## Overview
+## KBS Overview
 
 ### [Cloud Computing][c-cc]
   * [OneDrive][c-cc-onedrive]
@@ -112,22 +110,20 @@ filenames and `-iname` for insensitive case searching.
 
 ### Render an MD file
 
-#### Method 1: GitHub
+#### Method 1: via GitHub
 
 As these files are public, you can navigate to the desired file and have GitHub
 render the markdown file from there.
 
-#### Method 2: NeoVim Plugin - Mardown Preview
-This requires Neo(vim)'s plugin [Markdown Preview][mdp]. You can also refer to
+#### Method 2: via NeoVim Plugin - Mardown Preview
+
+[!IMPORTANT] This requires Neo(vim)'s plugin [Markdown Preview][mdp]. You can also refer to
 my [Arch dotfiles][dotties] or [macOS dotfiles][mac-nvim] for setup.
 
-##### Open the markdown file in vim and run the plugin:
+1. Open the markdown file in vim and run the plugin: `nvim +MarkdownPreview 
+README.md`
 
-``` bash
-nvim +MarkdownPreview README.md
-```
-
-### Troubleshooting
+## Troubleshooting
 
 :warning: Not all documents have been verified! 
 
