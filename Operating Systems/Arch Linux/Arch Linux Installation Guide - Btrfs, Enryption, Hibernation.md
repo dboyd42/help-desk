@@ -36,11 +36,13 @@
   * [Bootloader](#bootloader)
     * [1. Install the Booty Utilities](#1-install-the-booty-utilities)
     * [2. Install the GRUB Bootload on a UEFI Supported System](#2-install-the-grub-bootload-on-a-uefi-supported-system)
-    * [3.](#3)
+    * [3. Configure GRUB](#3-configure-grub)
+      * [3.1 Choose your ACPI value.](#31-choose-your-acpi-value)
+      * [3.2 Configure /etc/default/grub](#32-configure-etcdefaultgrub)
 * [Hibernation](#hibernation)
   * [Lid Toggle Hibernation](#lid-toggle-hibernation)
 * [Troubleshooting](#troubleshooting)
-  * [apropos / whatis returns "Nothing Appropriate"](#apropos--whatis-returns-nothing-appropriate)
+  * [apropos / whatis Returns "Nothing Appropriate"](#apropos--whatis-returns-nothing-appropriate)
     * [Solution](#solution)
     * [Error Summary](#error-summary)
 
@@ -258,7 +260,7 @@ $(grep -m1 'vendor_id' /proc/cpuinfo | awk '{print tolower($3)}' | sed 's/genuin
 btrfs-progs \
 sof-firmware pipewire \
 networkmanager \
-git vim \
+bat git vim tmux \
 man-db man-pages texinfo \
 reflector \
 sudo
@@ -432,7 +434,47 @@ grub-install --target=x86_64-efi --efidirectory=/boot --bootloader-id=GRUB
 > firmware's boot manager. It typically appears as an entry in the <u>*UEFI
 > boot menu*</u>, allowing the user to select "**GRUB**" as the boot loader.
 
-#### 3. 
+#### 3. Configure GRUB
+
+##### 3.1 Choose your ACPI value.
+
+The **<u>Advanced Configuration and Power Interface</u> (ACPI)**
+`acip_osi=""` option in GRUB is often used to address compatibility issues
+with certain hardware components, particularly in laptops and other devices
+that rely heavily on the **ACPI** for pwr mgmt and hw ctrl. This options can
+help ensure that the Linux kernel behaves in a manner similar to how it would
+on hardware ***designed to run*** the out-of-box (OOB) OS system, potentially
+improving compatibility and stability. Meaning, most laptop brands would be
+designed to run `\"Windows 2020\"` whereas Linux-specific brands (TUX,
+System76, etc) would be designed to run the `\"Linux"\` ACPI.
+
+| `ascpi_osi=`       | Emulates ACPI behavior compatible with {}             |
+|--------------------|-------------------------------------------------------|
+| `\"Android\"`      | Android-based hardware                                |
+| `\"Linux\"`        | Linux-based hardware                                  |
+| `\"Linux\"`        | :question: M Series-based MacBooks hardware:question: |
+| `\"Windows 2020\"` | generic modern Windows-based hardware                 |
+| `\"Windows 2015\"` | :question: Intel-based MacBooks hardware:question:    |
+| `\"Windows 10\"`   | Windows 10-based hardware                             |
+| `\"Windows 11\"`   | Windows 11-based hardware                             |
+| `\"Virtual\"`      | generic virtualization-based platforms                |
+| `\"Hyper-V\"`      | Hyper-V-based virtualization platforms                |
+| `\"QEMU\"`         | QEMU-based virtualization platforms                   |
+| `\"VMWare\"`       | VMWare-based virtualization platforms                 |
+| `\"VirtualBox\"`   | VirtualBox-based virtualization platforms             |
+| `\"Xen\"`          | Xen-based virtualization platforms                    |
+
+##### 3.2 Configure /etc/default/grub
+
+``` bash
+# 1. Get Root/Main Partition's UUID
+blkid -s UUID -o value /dev/nvme0n1p2 >> /etc/default/grub
+
+
+# 2. Edit /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT = "loglevel=3 quiet acpi_osi=\"<CHANGE_ABOVE>\" mem_sleep_default=deep cryptdevice=UUID=PASTED-UUID:cryptroot:allow-discards root=/dev/mapper/cryptroot"
+
+```
 
 ## Hibernation
 
@@ -469,7 +511,7 @@ sudo systemctl restart systemd-logind.service
 
 ## Troubleshooting
 
-### apropos / whatis returns "Nothing Appropriate"
+### apropos / whatis Returns "Nothing Appropriate"
 
 | Resolved | :heavy_check_mark: |
 |---------:|--------------------|
