@@ -57,6 +57,26 @@
 
 ## Setup the Installation Environment
 
+### 0a. Set Up a Fat Font
+
+> If you're running a VM and the font is illegibly small!
+
+``` bash
+# List bold triple-digit font sizes
+ls /usr/share/kbd/consolefonts | grep -E "[0-9]{3}b"
+
+# Set the font
+setfont ter-228b.psf.gz
+```
+
+### 0b. Verify the Boot Mode
+
+> Super important if you're f\*ing VM platform defaults to BIOS!
+
+``` bash
+cat /sys/firmware/efi/fw_platform_size
+```
+
 ### 1. Connect To Network
 
 ``` bash
@@ -81,17 +101,17 @@ timedatectl list-timezones | grep -i <city>
 # 3. Prevent clock drift
 timedatectl set-ntp true
 
-# 4. Confirm local and UTC times
-timedatectl
-
-# 5. Set hardware clock from UTC to local
+# 4. Set hardware clock from UTC to local
 hwclock --systohc
+
+# 5. Confirm local and UTC times
+timedatectl
 ```
 
 ### 4. Setup mirror list
 
 ``` bash
-reflector --latest 10 --sort rate --country US --save /etc/pacmand.d/mirrolist
+reflector --latest 10 --sort rate --country US --save /etc/pacman.d/mirrolist
 ```
 
 ### 5. Sync package database
@@ -113,16 +133,18 @@ lsblk
 #### 2. Manipulate partition table using either `fdisk`, `gdisk` (gptfdisk), etc
 
 ``` bash
+gdisk /dev/nvme0n1
+
 # 1. Make book EFI partition
 n
-1
+<CR>  # ENTER for default partition #2
 <CR>  # ENTER for default first sector
 +550M
 ef00
 
 # 2. Make main Linux parition
 n
-2
+<CR>  # ENTER for default partition #2
 <CR>  # ENTER for default first sector
 -50G  # Leaving 50G at the end for the SSD to work with
 <CR>  # ENTER for default type Linux
@@ -143,7 +165,7 @@ Y
 #### 1. Format the Boot Partition
 
 ``` bash
-mkfs.vfat /dev/nvme0n1p1
+mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
 #### 2. Setup Btrfs and encrypt via main Linux partition via LUKS
@@ -157,7 +179,6 @@ YES
 # 2. Decrypt the partition and map it to 'cryptroot'
 cryptsetup luksOpen /dev/nvme0n1p2 cryptroot
 <passphrase>
-
 
 # (Optional): Ensure your partition is opened & decrypted
 lsblk
@@ -193,6 +214,8 @@ ls /mnt
 
 #### 3. Create Btrfs Sub-Volumes
 
+> If using ext4, skip this step!
+
 ``` bash
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
@@ -205,7 +228,7 @@ umount /mnt
 > - The **`@`** symbol is used to denote subvolumes specific to the `btrfs`
 > command.
 
-#### 4. Mount The Filesystems
+##### 1. Mount The BTRFS Filesystems
 
 ``` bash
 # Mount the Root/main filesystem with the specified options
@@ -489,7 +512,6 @@ blkid -s UUID -o value /dev/nvme0n1p2 >> /etc/default/grub
 
 # 2. Edit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT = "loglevel=3 quiet acpi_osi=\"<CHANGE_ABOVE>\" mem_sleep_default=deep cryptdevice=UUID=PASTED-UUID:cryptroot:allow-discards root=/dev/mapper/cryptroot"
-
 ```
 
 ## Hibernation
