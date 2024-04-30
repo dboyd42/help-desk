@@ -163,11 +163,24 @@ cryptsetup luksOpen /dev/nvme0n1p2 cryptroot
 lsblk
 # (Optional): Ensure your device mapper is present
 ls /dev/mapper
+```
 
-# 3. Format the virtual block device with Btrfs
-mkfs.btrfs /dev/mapper/cryptroot
+* If using BTRFS:
 
-# 4. Mount the Btrfs encrypted in 'cryptroot' to /mnt
+    ``` bash
+    # 3. Format the virtual block device with Btrfs
+    mkfs.btrfs /dev/mapper/cryptroot
+    ```
+
+* Else if using Ext4:
+
+    ``` bash
+    # 3. Format the virtual block device with Ext4
+    mkfs.ext4 /dev/mapper/cryptroot
+    ```
+
+``` bash
+# 4. Mount the encrypted filesystem in 'cryptroot' to /mnt
 mount /dev/mapper/cryptroot /mnt
 
 # (Optional): Ensure the mounted 'cryptroot' is accessible
@@ -384,15 +397,18 @@ localectl set-keymap us
 #### Hostname
 
 ``` bash
-echo "<computerName>" > /etc/hostname
+export HOST=<myComputerName>
+echo $HOST > /etc/hostname
 ```
 
 #### Hosts
 
+> :warning: Assuming `export HOST=<myComputerName>` is set!
+
 Configure hosts file:
 
 ``` bash
-echo -e "127.0.0.1\tlocalhost\n::1\tlocalhost\n127.0.1.1\t$HOSTNAME.localdomain\t$HOSTNAME" > /etc/hosts
+echo -e "127.0.0.1\tlocalhost\n::1\tlocalhost\n127.0.1.1\t$HOST.localdomain\t$HOST" > /etc/hosts
 ```
 
 ### Root Password
@@ -407,7 +423,7 @@ passwd
 
 ``` bash
 # Choose the default prompts when installing
-pacman -Syu dosfstools efibootmgr grub mtools wpa_supplicant
+pacman -Syu efibootmgr grub
 ```
 
 #### 2. Install the GRUB Bootload on a UEFI Supported System
