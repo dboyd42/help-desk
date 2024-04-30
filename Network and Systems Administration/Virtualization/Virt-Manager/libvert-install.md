@@ -1,4 +1,4 @@
-# Virt-Manager && LibVert Setup
+# Virt-Manager && LibVirt Setup
 
 > Author: David Boyd<br>
 > Date: 2023-01-30 <br>
@@ -46,8 +46,8 @@ may first need to add a connection, then enable the connection.
 
 ``` bash
 # Networking
-yay -S ebtables dnsmasq
-
+pacman -S iptables  # If not already installed
+pacman -S dnsmasq
 
 # Method #1: Enable Virtual Adapters upon Start-Up
 sudo virsh net-autostart default
